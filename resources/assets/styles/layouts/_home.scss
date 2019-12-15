@@ -1,0 +1,103 @@
+.what_we_known_for {
+  .item {
+    display: grid;
+    grid-template-columns: em(965px) em(851px);
+    align-items: center;
+    margin-bottom: em(60px);
+
+    .img-wraper {
+      border: em(30px) solid rgba(206, 206, 206, 0.08);
+      border-radius: em(60px);
+      position: relative;
+      z-index: 2;
+    }
+    .img {
+      border: em(20px) solid #fff;
+      background: #f6f6f8;
+    }
+    .text {
+      background-color: #ffffff;
+      min-height: em(606px);
+      padding: em(90px);
+      margin-left: em(-30px);
+      h3 {
+        font-size: em(58px);
+        font-weight: 700;
+        color: rgba(#000000, 0.85);
+      }
+      h4 {
+        color: #d53742;
+        font-size: em(26px);
+        margin-bottom: calc-em(25, 26);
+      }
+    }
+    &.right {
+      justify-content: flex-end;
+      grid-template-columns: em(851px) em(965px);
+      .img-wraper {
+        grid-column: 2/3;
+        grid-row: 1;
+      }
+      .text {
+        grid-column: 1/2;
+        grid-row: 1;
+        margin-left: 0;
+        margin-right: em(-30px);
+      }
+    }
+  }
+}
+// =============================== that_where_we_came_in
+.that_where_we_came_in {
+  .items-wraper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px em(60px);
+    .img {
+      height: em(416px);
+      background: #f7f7f9;
+      margin-bottom: em(40px);
+    }
+    .text {
+      .title {
+        font-size: em(38px);
+        color: rgba(#000000, 0.85);
+        font-weight: 600;
+      }
+      h4 {
+        color: #d32d38;
+        font-size: em(25px);
+        margin-bottom: calc-em(25, 25);
+        margin-top: calc-em(15, 25);
+      }
+    }
+  }
+}
+// ==================================== meet_our_tea
+.meet_our_team {
+  background-color: rgba(#000000, 0.01);
+  .items-wraper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px em(70px);
+    .item {
+      background-color: #ffffff;
+      border: em(40px) solid rgba(174, 174, 174, 0.06);
+      border-radius: em(50px);
+      .text {
+        padding: em(25px) 15px;
+      }
+      .title {
+        font-size: em(36px);
+        color: rgba(#000000, 0.85);
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      p {
+        font-weight: 500;
+        font-size: em(25px);
+        color: rgba(#000000, 0.5);
+      }
+    }
+  }
+}
