@@ -1,5 +1,6 @@
 .main-footer {
   background-color: #000000;
+  font-size: 12px;
   a {
     &:hover {
       color: #fff !important;
@@ -42,14 +43,14 @@
 }
 .footer-menu-area {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   border-top: 2px solid #1c1c1c;
   border-bottom: 2px solid #1c1c1c;
   padding: em(40px) 0;
   margin-top: em(40px);
   margin-bottom: em(40px);
   .footer-logo {
-    font-size: em(18px);
+    font-size: 12px;
     color: rgba(#ffffff, 0.48);
     text-transform: uppercase;
   }

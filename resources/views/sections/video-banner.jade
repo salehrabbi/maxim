@@ -1,0 +1,31 @@
+section.banner-video.space.pb-0
+  .video-area
+    .video.position-relative
+      img(src="dist/images/video.png" alt="")
+      .playerID 
+        <i class="fas fa-play"></i>
+      iframe#VdoID.w-100.h-100(data-play="0" src='https://www.youtube.com/embed/EngW7tLk6R8' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' width='560' height='315' frameborder='0')
+    .content.align-self-center
+      h1.mb-4 SURGICAL & NON-SURGICAL HAIR LOSS SOLUTIONS.  
+      .address
+        p USA
+          a(href="#") (802) 370-3227 
+        p Turkey
+          a(href="#") (802) 278-5098   
+        p UAE
+          a(href="#") 971 52 718-1555  
+        p PHILIPPINES 
+          a(href="#") +63 2 818 6000  
+  .container-fluid.mt-4.mb-5 
+    .video-carosual
+      -for(var x=0; x<2; x++)
+        .item
+          img.w-100(src="dist/images/after-0.png" alt="")
+        .item
+          img.w-100(src="dist/images/after-1.png" alt="")  
+        .item
+          img.w-100(src="dist/images/after-2.png" alt="")  
+        .item
+          img.w-100(src="dist/images/after-3.png" alt="")  
+        .item
+          img.w-100(src="dist/images/after-4.png" alt="")  
