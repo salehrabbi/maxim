@@ -1,0 +1,30 @@
+header.main-header
+  .container
+    nav.navbar.navbar-expand-lg.row.py-0
+      a.navbar-brand(href='#')
+        img(src="dist/images/logo.png" alt="")
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mx-auto
+          li.nav-item.active
+            a.nav-link(href='#')
+              | sERVICES 
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='#') dOCTORS
+          li.nav-item  
+            a.nav-link(href='#') gALLERY
+          li.nav-item  
+            a.nav-link(href='#') uS lOCATIONS
+          li.nav-item.dropdown
+            a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+              | intl lOCATIONS
+            .dropdown-menu(aria-labelledby='navbarDropdown')
+              a.dropdown-item(href='#') Action
+              a.dropdown-item(href='#') Another action
+              a.dropdown-item(href='#') Something else here
+        .menu-button
+          a(href="#") 
+            span.mr-2 Call 
+            | (802) 370-3227

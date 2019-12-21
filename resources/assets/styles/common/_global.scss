@@ -6,7 +6,7 @@ body {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: (1200px);
+    max-width: (1206px+30);
   }
 }
 img {
@@ -51,6 +51,9 @@ p {
 
 .space {
   padding: em(70px) 0;
+  &-header {
+    padding-top: em(110px);
+  }
 }
 
 .see-more {
