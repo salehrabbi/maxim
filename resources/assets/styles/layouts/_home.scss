@@ -3,8 +3,7 @@
     display: grid;
     grid-template-columns: em(686px) em(605px);
     align-items: center;
-    margin-bottom: em(20px);
-    font-size: 10px;
+    margin-bottom: em(60px);
     &.left {
       .img-wraper,
       .img {
@@ -17,7 +16,6 @@
       border-radius: em(30px) em(60px) em(60px) em(30px);
       position: relative;
       z-index: 2;
-      font-size: 9px;
     }
     .img {
       border: em(20px) solid #fff;
@@ -26,11 +24,9 @@
     }
     .text {
       background-color: #ffffff;
-      // min-height: em(428px);
+      min-height: em(428px);
       padding: em(90px);
       margin-left: em(-30px);
-      font-size: 10px;
-      padding: 3em 5.625em;
       h3 {
         font-size: em(38px);
         font-weight: 700;
@@ -106,7 +102,6 @@
       border-radius: em(50px);
       .text {
         padding: em(15px) 15px;
-        border: 1px solid rgba(0, 0, 0, 0.09);
       }
       .title {
         font-size: em(24px);
