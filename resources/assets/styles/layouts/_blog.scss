@@ -1,0 +1,55 @@
+.blog-banner {
+  position: relative;
+  &:before {
+    content: "";
+    background-color: #fdf5f6;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(#fdf5f6, 0.41);
+    top: em(50px);
+    left: em(90px);
+    z-index: 1;
+    // background: #000;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  }
+  .container {
+    height: 631px;
+    z-index: 3;
+  }
+}
+
+// ============================= .blog-archive
+.blog-archive {
+  article {
+    width: 1000px;
+    h3 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: (60/48);
+      color: rgba(#000105, 0.8);
+    }
+    .date {
+      font-size: 15px;
+      color: #000000;
+    }
+    p {
+      font-size: 20px;
+      color: #888888;
+      line-height: 36px;
+      a {
+        color: #d32d38;
+      }
+    }
+  }
+}
