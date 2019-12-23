@@ -124,6 +124,7 @@
     content: "";
     width: 63%;
     height: 90%;
+    height: 99.7%;
     position: absolute;
     right: 0;
     top: 0;
@@ -138,14 +139,14 @@
   .video-area {
     display: grid;
     grid-template-columns: em(612px) auto;
-    grid-column-gap: (40px);
+    grid-column-gap: em(65px);
   }
   .video {
     background: #fff8f9;
     border: em(20px) solid #ffffff;
     border-left: 0;
     box-shadow: 0 0 em(20px) #fff8f9;
-    min-height: em(450px);
+    min-height: em(488px);
     iframe {
       display: none;
       height: 100%;
@@ -181,9 +182,12 @@
     }
   }
   .content {
-    max-width: 41.7em;
+    max-width: em(672px);
     h1 {
       color: rgba(#000000, 0.85);
+      font-size: em(52px);
+      font-weight: 700;
+      line-height: (68/52);
     }
     .address {
       display: grid;
@@ -197,12 +201,18 @@
         line-height: (28/18);
         text-transform: uppercase;
         border-right: 1px solid #d32d38;
+        line-height: 1;
         &:last-child {
           border-color: transparent;
+        }
+        b {
+          font-weight: 600;
         }
         a {
           display: block;
           color: #d32d38;
+          font-size: calc-em(16, 18);
+          margin-top: em(10px);
         }
       }
     }
