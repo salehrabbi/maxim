@@ -1,6 +1,6 @@
 .main-footer {
   background-color: #000000;
-  font-size: 12px;
+  padding: em(40px) 0 em(50px);
   a {
     &:hover {
       color: #fff !important;
@@ -20,18 +20,18 @@
       margin: 0;
       list-style: none;
       li {
-        margin-bottom: em(10px);
+        margin-bottom: em(6px);
       }
     }
     a {
-      font-size: em(18px);
+      font-size: em(14px);
       color: rgba(#ffffff, 0.75);
     }
     h3 {
-      color: #ffffff;
-      font-size: em(18px);
+      color: rgba(#ffffff, 0.9);
+      font-size: em(11px);
       font-weight: 600;
-      margin-bottom: calc-em(15, 18);
+      margin-bottom: calc-em(8, 11);
       text-transform: capitalize;
     }
   }
@@ -46,9 +46,9 @@
   grid-template-columns: 1fr 1fr;
   border-top: 2px solid #1c1c1c;
   border-bottom: 2px solid #1c1c1c;
-  padding: em(40px) 0;
-  margin-top: em(40px);
-  margin-bottom: em(40px);
+  padding: em(30px) 0;
+  margin-top: em(30px);
+  margin-bottom: em(30px);
   .footer-logo {
     font-size: 12px;
     color: rgba(#ffffff, 0.48);
@@ -61,13 +61,13 @@
     text-align: right;
     li {
       display: inline-block;
-      margin-left: em(70px);
+      margin-left: em(37px);
       &:first-child {
         margin-left: 0;
       }
     }
     a {
-      font-size: em(18px);
+      font-size: em(16px);
       color: rgba(#ffffff, 0.48);
     }
   }
