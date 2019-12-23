@@ -6,7 +6,7 @@ body {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: em(1200px);
+    max-width: 1200px;
   }
 }
 img {
@@ -21,6 +21,10 @@ img {
     color: #d32d38;
     margin: 0;
     margin-bottom: calc-em(7, 22);
+  }
+  p {
+    color: rgba(#000000, 0.53);
+    margin-top: em(13px);
   }
 }
 h1 {
@@ -71,7 +75,8 @@ p {
   align-items: center;
 
   &:hover {
-    background: #f6f6f8;
-    border-color: #fff;
+    background: #d32d38;
+    border-color: #d32d38;
+    color: #fff;
   }
 }

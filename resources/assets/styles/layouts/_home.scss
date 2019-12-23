@@ -105,26 +105,34 @@
 // ==================================== meet_our_tea
 .meet_our_team {
   background-color: rgba(#000000, 0.01);
+  .see-button {
+    margin-top: em(72px);
+  }
   .items-wraper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px em(30px);
+    grid-gap: em(76px) em(80px);
     .item {
       background-color: #ffffff;
-      border: em(40px) solid rgba(174, 174, 174, 0.06);
-      border-radius: em(50px);
+      // border: em(40px) solid rgba(174, 174, 174, 0.06);
+      // border-radius: em(50px);
+      box-shadow: 0 10px 60px rgba(174, 174, 174, 0.12);
+      border: 1px solid rgba(0, 0, 0, 0.09);
+      max-width: em(289px);
+      margin: 0 auto;
       .text {
-        padding: em(15px) 15px;
+        padding: em(18px) 15px;
       }
       .title {
         font-size: em(24px);
         color: rgba(#000000, 0.85);
-        font-weight: 700;
-        text-transform: uppercase;
+        font-weight: 600;
+        // text-transform: uppercase;
       }
       p {
-        font-weight: 500;
-        color: rgba(#000000, 0.5);
+        // font-weight: 500;
+        color: rgba(#000000, 0.7);
+        margin-bottom: 8px;
       }
     }
   }
