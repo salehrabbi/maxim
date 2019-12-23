@@ -1,9 +1,10 @@
 .what_we_known_for {
+  padding-bottom: em(103px);
   .item {
     display: grid;
-    grid-template-columns: em(686px) em(605px);
+    grid-template-columns: em(687px) em(570px);
     align-items: center;
-    margin-bottom: em(60px);
+    margin-bottom: em(84px);
     &.left {
       .img-wraper,
       .img {
@@ -12,21 +13,22 @@
     }
 
     .img-wraper {
-      border: em(25px) solid rgba(206, 206, 206, 0.08);
-      border-radius: em(30px) em(60px) em(60px) em(30px);
+      // border: em(25px) solid rgba(206, 206, 206, 0.08);
+      // border-radius: em(30px) em(60px) em(60px) em(30px);
       position: relative;
       z-index: 2;
     }
     .img {
       border: em(20px) solid #fff;
       background: #f6f6f8;
-      height: em(570px);
+      height: em(525px);
+      box-shadow: 0 10px 60px rgba(206, 206, 206, 0.08);
     }
     .text {
       background-color: #ffffff;
       min-height: em(428px);
-      padding: em(90px);
-      margin-left: em(-30px);
+      padding: em(40px) em(66px);
+      // margin-left: em(-30px);
       h3 {
         font-size: em(38px);
         font-weight: 700;
@@ -35,20 +37,25 @@
       h4 {
         color: #d53742;
         font-size: em(18px);
-        margin-bottom: calc-em(25, 18);
+        margin-bottom: calc-em(35, 18);
+        letter-spacing: calc-em(0.18, 18);
+        font-weight: 400;
       }
       p {
-        font-size: em(20px);
+        font-size: em(19px);
+        font-weight: 300;
+        color: rgba(#000000, 0.7);
       }
     }
     &.right {
       justify-content: flex-end;
       // grid-template-columns: em(851px) em(965px);
-      grid-template-columns: em(605px) em(686px);
+      // grid-template-columns: em(605px) em(686px);
+      grid-template-columns: em(570px) em(687px);
       .img-wraper {
         grid-column: 2/3;
         grid-row: 1;
-        border-radius: em(60px) em(30px) em(30px) em(60px);
+        // border-radius: em(60px) em(30px) em(30px) em(60px);
         border-right: 0;
       }
       .img {
@@ -58,7 +65,7 @@
         grid-column: 1/2;
         grid-row: 1;
         margin-left: 0;
-        margin-right: em(-30px);
+        // margin-right: em(-30px);
       }
     }
   }
