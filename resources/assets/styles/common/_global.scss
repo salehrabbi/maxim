@@ -6,7 +6,7 @@ body {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: (1206px+30);
+    max-width: em(1200px);
   }
 }
 img {

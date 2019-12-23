@@ -75,23 +75,29 @@
   .items-wraper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px em(40px);
+    grid-gap: 30px em(42px);
     .img {
       height: em(296px);
       background: #f7f7f9;
-      margin-bottom: em(25px);
+      margin-bottom: em(40px);
     }
     .text {
       .title {
         font-size: em(26px);
         color: rgba(#000000, 0.85);
-        font-weight: 600;
+        font-weight: 700;
+        letter-spacing: calc-em(0.52, 26);
       }
       h4 {
         color: #d32d38;
-        font-size: em(18px);
-        margin-bottom: calc-em(15, 25);
-        margin-top: calc-em(5, 25);
+        font-size: em(16px);
+        margin-bottom: calc-em(15, 26);
+        margin-top: calc-em(10, 26);
+        font-weight: 400;
+      }
+      p {
+        color: rgba(#000000, 0.42);
+        line-height: (24/16);
       }
     }
   }
