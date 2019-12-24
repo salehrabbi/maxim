@@ -45,3 +45,6 @@ $(".playerID").click(function() {
     $("#VdoID").attr("data-play", 0);
   }
 });
+
+// ============================== bg
+// $(".faq .img-bg").css({ height: $(".faq").outerHeight() + "px" });

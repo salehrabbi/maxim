@@ -1,0 +1,186 @@
+extends layouts/app.jade
+
+block title
+  title Location
+
+block vars  
+  -var bodyClass = 'location-page'
+
+block main
+  section.location-page-top.space.space-header.pb-0
+    .pic-gallery.position-relative
+      .gallery
+        .row.m-0
+          .col-4.p-0
+            img.w-100.h-100(src="dist/images/gallery-1.png" alt="")
+          .col-4.p-0
+            img.w-100.h-100(src="dist/images/gallery-2.png" alt="")
+          .col-4.p-0
+            img.w-100.h-100(src="dist/images/gallery-3.png" alt="")
+        .container.gallery-show-wraper
+          a.gallery-show.d-flex.align-items-center.justify-content-center.ml-auto(href="#")
+            img(src="dist/images/gallery-dot.png" alt="")    
+            span Show Photos
+    .container
+      .content-wraper
+        .section-heading.p-0.d-flex.flex-column.justify-content-center
+          h2 NYC Hair Transplant Specialists
+          h4.border-before.d-flex.align-items-center Providing Surgical & Non-Surgical Procedures
+          blockquote Our office is located on the upper east side, and we take clients from all of manhattan and nyc.
+        .map
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.305935303!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z4Kao4Ka_4KaJIOCmh-Cmr-CmvOCmsOCnjeCmlSwg4Kau4Ka-4Kaw4KeN4KaV4Ka_4KaoIOCmr-CngeCmleCnjeCmpOCmsOCmvuCmt-CnjeCmn-CnjeCmsA!5e0!3m2!1sbn!2sbd!4v1577189207882!5m2!1sbn!2sbd" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          .address-wraper.align-items-center
+            .address
+              .title 903 Park Avenue, NY 10075
+              a(href="#" style="text-decoration: underline;" target="_blank") Get directions
+            .contact.text-right
+              .title Contact No.
+              a(href="#") (802) 370-3227  
+      .row
+        include sections/video-carosual.jade    
+  section.meet_our_team.space
+    .container
+      .items-wraper
+        .section-heading.p-0.d-flex.flex-column.justify-content-center
+          h4.border-before.d-flex.align-items-center Our Doctors
+          h2 Meet Our Team
+          p.mb-0 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        .item
+          .img
+            img.w-100(src="dist/images/doctor-1.png" alt="")
+          .text.d-flex.flex-column.justify-content-center.align-items-center
+            a.title(href="#") Dr. Doshi
+            p Plastic surgeon. Performs FUE
+        .item
+          .img
+            img.w-100(src="dist/images/doctor-4.png" alt="")
+          .text.d-flex.flex-column.justify-content-center.align-items-center
+            a.title(href="#") Dr. Mayer
+            p Performs hair transplants
+  section.services.overflow-hidden
+    .container(style="max-width: 1040px")
+      .section-heading.text-center.medium
+        h3.text-uppercase Services
+        p.m-0.mt-1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+      .searvice-content-wraper
+        ul.content
+          each val, index in ['FUT Hair Transplant', 'FUE Hair Transplant', 'Microneedling','Scalp Micropigmentation','Platelet Rich Plasma (PRP)','Stem Cell Therapy']
+            li
+              .title= val
+              .p 
+                | Lorem ipsum dolor sit amet, consetetur ddff sadipscing elitr, sed diam nonumy eirmod tempor.
+                div(style="grid-column: 2/-1")  
+                  a.more(href="#") Learn more
+        .img.d-flex.align-items-center
+          img.w-100(src="dist/images/service-img.png" alt="")   
+  section.technicians             
+    .container(style="max-width: 1040px")
+      .technicians-wraper
+        .img.d-flex.align-items-center.justify-content-end(style="margin-top: 2.8125em;")
+          .img-shadow
+            img.position-relative(src="dist/images/technicians.png" alt="")
+        .content
+          h3 Technicians
+          ul.p-0.m-0.list-unstyled
+            each val, index in ['Former Bosley Techs 8 years avg. experience', 'FUT+FUE Experienced', 'Outstanding SMP Techs Microneedling by Nurse PRP done by Surgeon']
+              li
+                <i class="fal fa-check-circle"></i>
+                span= val  
+  section.pricing.space
+    .container(style="max-width: 1040px")
+      .section-heading.text-center.medium
+        h3 Lorem ipsum
+        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+      .pricing-content-area
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-price.png" alt="")
+            span Pricing
+          ul
+            each val, index in ['FUT starting at $3.50 per graft', 'FUE starting at $4.50 per graft', 'No hidden fee','0% Financing','No gimmicks','Cashier’s Check + Financing','All inclusive','Accept Cash, Credit Cards']
+              li
+                span= val  
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-finance.png" alt="")
+            span Financing
+          ul  
+            each val, index in ['0% Financing if qualified', 'Care Credit', 'Lending Club','Green Sky Credit','Alphaeon (in process)','United Medical Credit']
+              li
+                span= val  
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-map.png" alt="")
+            span Areas Served
+          ul  
+            each val, index in ['Manhattan, NYC', 'Brooklyn, Bronx, Queens', 'New York City, Connecticut','Staten Island+Westchester','Northern New Jersey','Long Island, Nassau+Suffolk']
+              li
+                span= val                 
+  section.technicians             
+    .container(style="max-width: 1040px")
+      .technicians-wraper.right
+        .content
+          h3 Why Maxim?
+          ul.p-0.m-0.list-unstyled
+            each val, index in ['Board Certified Surgeon. MEGA Sessions to 4K Grafts Outstanding Reviews.', 'AAAHC Certified Surgery Center.', 'BBB Accredited Facility. One Client at a Time.','Affordable Prices','0% Financing']
+              li
+                <i class="fal fa-check-circle"></i>
+                span= val  
+        .img.d-flex.align-items-center.justify-content-end
+          .img-shadow
+            img.position-relative(src="dist/images/card.png" alt="")
+  section.review.space
+    .container(style="max-width: 1040px")
+      .section-heading.medium.text-left.m-0
+        h3.mb-2 Customer Review
+        .total-star.d-flex.align-items-center  
+          span 4.9
+          .stars
+            -for(var x=0; x<5; x++)
+              <i class="fas fa-star"></i>
+      ul.client-review.p-0.m-0.list-unstyled
+        -for(var y=0; y<2; y++)
+          li
+            .avator
+              .img
+                img(src="dist/images/review.png" alt="")
+              .text.align-self-center
+                .name.d-flex.align-items-center
+                  a(href="#") Vincent T.
+                  ul
+                    li 
+                      span September, 2019
+                .total-star.d-flex.align-items-center  
+                  .stars.ml-0
+                    -for(var x=0; x<5; x++)
+                      <i class="fas fa-star"></i> 
+                  span 5.0   
+            p.p “I had my first hair transplant in July 2016 with Maxim. I found everyone there very friendly and very considerate of my wishes and my comfort. They even bought me lunch when we took a brake around
+            div
+              a.more(href="#")
+                <i class="far fa-plus mr-1"></i>
+                span.color-black More 
+      div
+        a.more(href="#")
+          span.color-brick-red See all Reviews          
+  section.space.faq.overflow-hidden
+    .container
+      .section-heading.text-center.medium
+        h3 FAQS
+        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy dolore
+      .faq-content-wraper
+        .img.position-relative
+          img(src="dist/images/faq.png" alt="")  
+          .img-bg
+        .question  
+          #accordionExample.accordion
+            each val, index in ['Lorem ipsum dolor sit amet, consetetur','Lorem ipsum dolor sit amet, consetetur sadipscing elitr','Lorem ipsum dolor sit amet, consetetur','Lorem ipsum dolor sit amet, consetetur']
+              .card
+                .card-header.px-0.py-3.border-0(id="heading"+index)
+                  h3.mb-0.position-relative.pr-3
+                    button.btn.text-left.p-0(type='button' data-toggle='collapse' data-target='#collapse'+index aria-expanded='false' aria-controls='collapse'+index)= val
+                      <i class="far fa-angle-down"></i>
+                .collapse(aria-labelledby='heading'+index data-parent='#accordionExample' id="collapse"+index)
+                  .card-body.px-0.pt-0 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd...
+          .mt-5
+            <a class="see-more btn" href="#">See all</a>
