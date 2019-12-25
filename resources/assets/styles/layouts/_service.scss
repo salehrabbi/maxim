@@ -1,0 +1,115 @@
+.service-page-top {
+  background: none;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 70.425vw;
+    background-image: linear-gradient(40deg, #fff2f3 0%, #ffffff 100%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+  }
+  &.space-header {
+    padding-top: 7.5em;
+  }
+}
+// ======================= .advantage
+.advantage {
+  padding: em(60px) 0;
+
+  &.advantage-main {
+    clip-path: polygon(0 0, 100% 9.5%, 100% 100%, 0 100%);
+    margin-top: em(-40px);
+    padding-top: em(60px+40);
+  }
+  &-bg {
+    background-color: rgba(#fafafa, 0.4);
+  }
+  .content-wraper {
+    display: grid;
+    grid-template-columns: auto em(474px);
+    grid-column-gap: em(100px);
+    .img {
+      padding: em(50px) 0;
+      &:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: em(364px);
+        background-color: rgba(#ffe5e7, 0.22);
+        top: 0;
+        right: 0;
+        z-index: -1;
+      }
+    }
+  }
+}
+// ================================ ..price-section
+.price-section {
+  padding: em(70px) 0;
+  .content-wraper {
+    display: grid;
+    grid-template-columns: em(397px) auto;
+    &.img-right {
+      grid-template-columns: auto em(398px);
+      .content {
+        &:after {
+          left: auto;
+          right: 100%;
+        }
+      }
+    }
+    .content {
+      background-color: rgba(#d32d38, 0.02);
+      padding: em(45px) em(60px);
+      position: relative;
+      min-height: em(371px);
+      &:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100vw;
+        left: 100%;
+        top: 0;
+        background-color: rgba(#d32d38, 0.02);
+        z-index: -1;
+      }
+    }
+  }
+}
+
+// ======================================== .post-op
+.post-op {
+  .content-wraper {
+    grid-template-columns: auto em(529px);
+    grid-column-gap: em(60px);
+    .img {
+      &:after {
+        // width: em(364px);
+        background-color: rgba(#f1f1f1, 0.47);
+      }
+    }
+  }
+}
+// ======================= why-maxim
+.why-maxim {
+  .img-left {
+    grid-template-columns: em(529px) auto;
+    grid-column-gap: em(73px);
+    .img {
+      img {
+        z-index: 2;
+      }
+      &:after {
+        // width: em(364px);
+        background-color: #ffffff;
+        right: auto;
+        left: 0;
+        z-index: 1;
+      }
+    }
+  }
+}
