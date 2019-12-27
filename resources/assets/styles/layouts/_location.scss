@@ -223,7 +223,7 @@
       background-color: #ffffff;
       padding: em(35px);
       position: relative;
-      min-height: em(419px);
+      // min-height: em(419px);
       &:after {
         content: "";
         width: em(80px);
@@ -254,6 +254,9 @@
           color: rgba(#000000, 0.85);
           font-size: em(10px);
           margin-bottom: calc-em(13.5, 10);
+          b {
+            font-weight: 600;
+          }
           span {
             font-size: calc-em(14, 10);
             margin-left: 4px;
@@ -373,9 +376,7 @@
     font-size: 14px;
     font-weight: 400;
   }
-  .btn:focus {
-    box-shadow: none;
-  }
+
   .faq-content-wraper {
     display: grid;
     grid-template-columns: em(445px) auto;

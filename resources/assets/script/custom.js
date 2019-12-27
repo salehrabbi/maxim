@@ -27,6 +27,35 @@ $(".video-carosual").slick({
   ]
 });
 
+$(".more-doctor-slider").slick({
+  slidesToShow: 4,
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  prevArrow: '<i class="far fa-angle-left left"></i>',
+  nextArrow: '<i class="far fa-angle-right right"></i>',
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: "40px",
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: "40px",
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
 $(".playerID").click(function() {
   var videoURL = $("#VdoID").attr("src"),
     dataplay = $("#VdoID").attr("data-play");

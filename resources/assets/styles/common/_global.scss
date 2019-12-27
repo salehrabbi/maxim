@@ -133,6 +133,16 @@ blockquote {
   border-left: 2px solid #d32d38;
   padding: em(5px) 0;
   padding-left: em(19px);
+  font-size: 18px;
+  h5 {
+    font-weight: 600;
+    color: rgba(#000000, 0.9);
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+    line-height: (26/14);
+  }
 }
 
 .list-red {
@@ -157,6 +167,11 @@ blockquote {
     }
   }
 }
+.list-black {
+  span {
+    color: rgba(#000000, 0.7) !important;
+  }
+}
 // ========================= .page-top
 .border-bottom {
   border-color: rgba(#000000, 0.08) !important;
@@ -168,6 +183,7 @@ section.page-top {
   }
   .banner-big-img {
     position: relative;
+    min-height: em(488px);
     img {
       position: relative;
       z-index: 2;
@@ -178,7 +194,7 @@ section.page-top {
       height: em(434px);
       width: em(573px);
       right: 0;
-      bottom: em(-10px);
+      bottom: 0;
       border: 1px solid #d32d38;
       z-index: 1;
     }
@@ -204,4 +220,7 @@ section.page-top {
       margin-right: calc-em(20, 15);
     }
   }
+}
+.btn:focus {
+  box-shadow: none !important;
 }

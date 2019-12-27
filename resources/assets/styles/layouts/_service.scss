@@ -56,6 +56,8 @@
     &.img-right {
       grid-template-columns: auto em(398px);
       .content {
+        padding: em(20px) em(15px);
+        padding-left: 0;
         &:after {
           left: auto;
           right: 100%;
@@ -64,7 +66,8 @@
     }
     .content {
       background-color: rgba(#d32d38, 0.02);
-      padding: em(45px) em(60px);
+      padding: em(20px) em(15px);
+      padding-left: (60px);
       position: relative;
       min-height: em(371px);
       &:after {

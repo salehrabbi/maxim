@@ -1,0 +1,137 @@
+extends layouts/app.jade
+
+block title
+  title Doctor
+
+block vars  
+  -var bodyClass = 'doctor-page'
+
+block main
+  section.location-page-top.space.space-header.pb-0.page-top.service-page-top.position-relative(style="z-index: 2;")
+    .container
+      .content-wraper
+        .section-heading.p-0.d-flex.flex-column.justify-content-center
+          h2 DR. doshi
+          h4.border-before.d-flex.align-items-center.mb-0.pb-4  Facial plastic surgeon, FUT & FUE
+          blockquote.mt-2.mb-4 
+            h5.mb-2 About Dr. Doshi. 
+            p.m-0 Facial plastic surgeon. Offers FUT, FUE, eyebrow, beard, mustache and facial hair transplant surgery & PRP, in New York City (NYC), Great Neck, and New Jersey (NJ).
+          .details.mt-3
+            .row
+              .col-md-12.item
+                .img
+                  img(src="dist/images/imap-1.png" alt="")
+                span.title Location
+                span New Jersey, New York City & Long Island.
+              .col-md-12.item.mb-0
+                .img
+                  img(src="dist/images/ihand-2.png" alt="")
+                span.title Community
+                span Charity, Philanthropic Care & Community Activities. 
+        .banner-big-img
+          img.h-intial(src="dist/images/dr-hardik-doshi.png" alt="")
+      .row.mt-3
+        include sections/video-carosual.jade     
+  section.pricing.space.doctor-pricing
+    .container.container-custom
+      .section-heading.text-center.medium
+        h3 Doctor's detail
+        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+      .pricing-content-area
+        .item__parent
+          .item
+            .title.d-flex.align-items-center
+              img(src="dist/images/icon-map.png" alt="")
+              span Experience
+            ul.list-unstyled.p-0
+              each val, index in ['Facial plastic and reconstructive surgeon.', 'Specializes in all aspects of surgical and non-surgical face and neck rejuvenation including hair transplants.']
+                li
+                  .number= "0"+(index+1)+"."
+                  span.position-static.m-0= val  
+        .item__parent          
+          .item
+            .title.d-flex.align-items-center
+              img(src="dist/images/icon-hat.png" alt="")
+              span Training
+            ul.list-unstyled.p-0  
+              each val, index in ['Trained At New York-Presbyterian/Columbia University Medical Center.', 'New York-Presbyterian/Weill Cornell Medical Center.', 'Memorial Sloan Kettering.']
+                li
+                  .number= "0"+(index+1)+"."
+                  span.position-static.m-0= val 
+        .item__parent          
+          .item
+            .title.d-flex.align-items-center
+              img(src="dist/images/icon-cup.png" alt="")
+              span Accomplishments
+            ul.list-unstyled.p-0  
+              each val, index in ['Lectured on surgical topics both nationally and internationally.', 'Inducted into the alpha omega alpha medical honor society.', 'Serves as one of only a handful of selected physicians across the country to advise on cases in the field of facial plastic and head & neck surgery for prominent medical groups.']
+                li
+                  .number= "0"+(index+1)+"."
+                  span.position-static.m-0= val            
+  section.procedure.overflow-hidden.space.pb-0
+    .container.container-custom
+      .content-wraper
+        .content
+          .section-heading.medium.m-0.pb-3
+            h3 Procedures
+          #accordionExample2.accordion
+            each val, index in ['FUT Hair Transplant','FUe Hair Transplant','Platelet Rich Plasma (PRP)','Rhinoplasty','Injectables & Fillers','Stem Cell Therapy','Hybrid Procedures','Facial Plastic Surgery','Eyelid Surgery']
+              .card
+                .card-header.px-0.p-0.border-0(id="heading2"+index type='button' data-toggle='collapse' data-target='#collapse'+index+"q" aria-expanded='false' aria-controls='collapse'+index+"q")
+                  h3.mb-0.position-relative.pr-5
+                    .btn.text-left.p-0
+                      ul.py-0.m-0.pl-3
+                        li
+                          .title
+                            span= val
+                            <i class="fal fa-plus"></i> 
+                .collapse(aria-labelledby='heading2'+index data-parent='#accordionExample2' id="collapse"+index+"q")
+                  .card-body.pl-0.pt-0.pr-5 
+                    p Also known as The Strip hair transplant procedure, FUT is hair restoration surgery that enables MAXIM hair transplant surgeons to perform mega sessions up to 4,000 grafts.
+                    .pb-1
+                      a.more(href="#") Learn more
+
+
+  section.price-section.overflow-hidden
+    .container.container-custom
+      .content-wraper
+        .img
+          img.h-intial(src="dist/images/patner.png" alt="")
+        .content.align-self-center.d-flex.flex-column.justify-content-center
+          .section-heading.medium.m-0.p-0(style="max-width:415px")
+            h3 Associations
+            p.mt-1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy dolore magna
+          ul.p-0.m-0.list-unstyled.list-red.list-black
+            each val, index in ['American Academy of Facial Plastic and Reconstructive Surgery.','American Academy of Cosmetic Surgery.','American Society for Laser Medicine and Surgery.','American Academy of Otolaryngology – Head & Neck Surgery.','American Medical Association.','Alpha Omega Alpha Medical Honor Society.']
+              li
+                <i class="fal fa-check-circle"></i>
+                span= val             
+  section.price-section.overflow-hidden
+    .container.container-custom
+      .content-wraper.img-right
+        .content.align-self-center.d-flex.flex-column.justify-content-center
+          .section-heading.medium.m-0.p-0(style="max-width:415px")
+            h3.mb-3 Why Dr. Doshi?
+          ul.p-0.m-0.list-unstyled.list-red.list-black
+            each val, index in ['Board Certified in Head & Neck / Facial Plastic Surgery.','Dual ivy League-educated and fellowship-trained facial plastic and reconstructive surgeon.','Approaches hair transplants with a discerning eye, aiming to restore a natural hairline for a youthful appearance.','Uses the latest techniques with finesse.','Tailors his work to a patient’s particular facial attributes for the most meaningful and long-lasting results.']
+              li
+                <i class="fal fa-check-circle"></i>
+                span= val
+        .img
+          img.h-intial(src="dist/images/laptop.png" alt="")
+  section.more-doctor.pt-3
+    .container.container-custom
+      .section-heading.medium.p-0.text-center(style="max-width:415px")
+        h3 More Doctors
+      .overflow-hidden
+        .more-doctor-slider
+          each val, index in ['DR. BERNETT', 'DR. HAMWI', 'DR. MAYER','Dr. Thiele','DR. BERNETT', 'DR. HAMWI', 'DR. MAYER','Dr. Thiele']
+            .item.text-center
+              .item-wraper
+                img.w-100(src="dist/images/m-doctor-"+index+".png.png" alt="")  
+                .title
+                  a(href="#")= val
+                p Plastic surgeon. Performs FUT, FUE, Hair Transplants, PRP, facial, beard, mustache hair transplants, Stem Cell Therapy in Newport Beach, California.
+                div
+                  a.more(href="#") View full details    
+  include sections/faq.jade  

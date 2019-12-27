@@ -1,0 +1,200 @@
+.doctor-page {
+  .service-page-top::after {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    background: #fdf5f6;
+  }
+  section.page-top .banner-big-img::after {
+    border-color: #fff;
+    background: #fff;
+  }
+}
+
+// =============================== doctor pricing
+.doctor-pricing {
+  margin-top: em(-43px);
+  padding-top: em(67+43);
+  .pricing-content-area {
+    .item {
+      .title {
+        span {
+          font-weight: 600;
+        }
+      }
+      ul li {
+        border-bottom: 1px solid rgba(#000000, 0.18);
+        padding-bottom: 14px;
+        margin-bottom: 10px;
+        &:last-child {
+          border-bottom-color: transparent;
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+      }
+      .number {
+        color: rgba(#000000, 0.11);
+        font-weight: 600;
+        font-size: calc-em(28, 10);
+      }
+    }
+  }
+}
+// =========================== .more-doctor
+.more-doctor {
+  .more-doctor-slider {
+    // margin: 0 em(-10/2);
+    padding-bottom: 60px;
+    .slick-arrow {
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      background-color: #ffffff;
+      width: 43px;
+      height: 43px;
+      line-height: 43px;
+      text-align: center;
+      color: rgba(#d32d38, 0.49);
+      cursor: pointer;
+      font-size: 20px;
+      position: absolute;
+      bottom: 40px;
+      left: 43%;
+      &.right {
+        left: auto;
+        right: 43%;
+      }
+      &:hover {
+        box-shadow: 0 10px 40px rgba(229, 229, 229, 0.6);
+        color: rgba(#d32d38, 1);
+      }
+    }
+    .item {
+      padding: 0 em(12/2);
+      border: 1px solid transparent;
+      padding-top: em(64px);
+      padding-bottom: em(66px);
+      .item-wraper {
+        padding: em(22px);
+      }
+      &:hover {
+        .item-wraper {
+          box-shadow: 0 10px 50px rgba(174, 174, 174, 0.15);
+          border-color: rgba(0, 0, 0, 0.09);
+          background-color: #ffffff;
+        }
+      }
+      img {
+      }
+      .title {
+        font-size: em(18px);
+        color: #000000;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: calc-em(14, 18) 0;
+        a {
+          color: #000000;
+        }
+      }
+      p {
+        font-size: em(14px);
+        color: rgba(#000000, 0.62);
+        font-weight: 300;
+        line-height: (24/14);
+      }
+      .more {
+        font-size: em(13px);
+        color: rgba(#d32d38, 0.9);
+      }
+    }
+  }
+}
+// =============================== .procedure
+.procedure {
+  .content-wraper {
+    display: grid;
+    grid-template-columns: auto em(306px);
+    grid-column-gap: em(91px);
+  }
+  .content {
+    .accordion {
+      background-color: rgba(#a4a4a4, 0.04);
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100vw;
+        right: 100%;
+        top: 0;
+        z-index: -1;
+        background-color: rgba(#a4a4a4, 0.04);
+      }
+    }
+    .card {
+      background: none;
+      border: none;
+      border-radius: 0;
+      overflow: initial;
+      position: relative;
+      .card-header {
+        border-radius: 0;
+        background: none;
+
+        &[aria-expanded="true"] {
+          &:before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100vw;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            background-color: rgba(#d32d38, 0.04);
+          }
+          .title {
+            i {
+              background-color: #d32d38;
+              border-color: #d32d38;
+              color: #fff;
+              &:before {
+                content: "\f068";
+              }
+            }
+          }
+        }
+        li {
+          font-size: 12px;
+        }
+        .title {
+          padding: 15px 0;
+          font-size: 18px;
+          font-weight: 500;
+          color: #000000;
+          span {
+            position: relative;
+            top: 2px;
+            margin-left: 5px;
+          }
+          i {
+            width: 22px;
+            height: 22px;
+            border: 1px solid #000000;
+            background-color: #ffffff;
+            line-height: 20px;
+            font-size: 14px;
+            text-align: center;
+            position: absolute;
+            right: 28px;
+          }
+        }
+      }
+      .card-body {
+        font-size: 14px;
+        color: rgba(#000000, 0.6);
+        .more {
+          font-size: 16px;
+          font-weight: 500;
+          color: #d32d38;
+        }
+      }
+    }
+  }
+}
