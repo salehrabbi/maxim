@@ -73,6 +73,9 @@
 // ================================ .services
 .services {
   margin-bottom: em(80px);
+  .section-heading {
+    padding-bottom: em(47px);
+  }
   .searvice-content-wraper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -187,15 +190,16 @@
         font-weight: 500;
         line-height: (28/18);
         display: grid;
-        grid-template-columns: calc-em(18, 18) 1fr;
-        grid-column-gap: calc-em(17, 18);
+        grid-template-columns: calc-em(24, 18) 1fr;
+        grid-column-gap: calc-em(15, 18);
         i {
-          margin-top: calc-em(29, 18);
+          margin-top: calc-em(32, 22);
           color: #d32d38;
+          font-size: calc-em(22, 18);
         }
         span {
           border-bottom: 1px solid #dcdcdc;
-          padding: calc-em(25, 18) 0;
+          padding: calc-em(30, 18) 0;
         }
         &:last-child {
           span {

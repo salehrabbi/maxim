@@ -45,6 +45,7 @@
         font-size: em(19px);
         font-weight: 300;
         color: rgba(#000000, 0.7);
+        line-height: (36/19);
       }
     }
     &.right {
@@ -91,8 +92,8 @@
       h4 {
         color: #d32d38;
         font-size: em(16px);
-        margin-bottom: calc-em(15, 26);
-        margin-top: calc-em(10, 26);
+        margin-bottom: calc-em(17, 26);
+        margin-top: calc-em(14, 26);
         font-weight: 400;
       }
       p {
@@ -106,7 +107,7 @@
 .meet_our_team {
   background-color: rgba(#000000, 0.01);
   .see-button {
-    margin-top: em(72px);
+    margin-top: em(70px);
   }
   .items-wraper {
     display: grid;
@@ -132,7 +133,7 @@
       p {
         // font-weight: 500;
         color: rgba(#000000, 0.7);
-        margin-bottom: 8px;
+        margin-bottom: 4px;
       }
     }
   }

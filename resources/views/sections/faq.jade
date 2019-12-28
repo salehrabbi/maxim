@@ -12,7 +12,7 @@ section.space.faq.overflow-hidden
           each val, index in ['Lorem ipsum dolor sit amet, consetetur','Lorem ipsum dolor sit amet, consetetur sadipscing elitr','Lorem ipsum dolor sit amet, consetetur','Lorem ipsum dolor sit amet, consetetur']
             .card
               .card-header.px-0.py-3.border-0(id="heading"+index)
-                h3.mb-0.position-relative.pr-3
+                .mb-0.position-relative.pr-3
                   button.btn.text-left.p-0(type='button' data-toggle='collapse' data-target='#collapse'+index aria-expanded='false' aria-controls='collapse'+index)= val
                     <i class="far fa-angle-down"></i>
               .collapse(aria-labelledby='heading'+index data-parent='#accordionExample' id="collapse"+index)
