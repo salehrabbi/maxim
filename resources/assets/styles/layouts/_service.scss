@@ -1,6 +1,9 @@
 .service-page-top {
   background: none;
   position: relative;
+  @include xl {
+    background: #fdf5f6;
+  }
   &:after {
     content: "";
     position: absolute;
@@ -11,6 +14,9 @@
     left: 0;
     z-index: -1;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    @include xl {
+      display: none;
+    }
   }
   &.space-header {
     padding-top: 7.5em;
@@ -24,6 +30,9 @@
     clip-path: polygon(0 0, 100% 9.5%, 100% 100%, 0 100%);
     margin-top: em(-40px);
     padding-top: em(60px+40);
+    @include xl {
+      clip-path: none;
+    }
   }
   &-bg {
     background-color: rgba(#fafafa, 0.4);
@@ -32,8 +41,16 @@
     display: grid;
     grid-template-columns: auto em(474px);
     grid-column-gap: em(100px);
+    @include lg {
+      grid-template-columns: 1fr;
+      grid-row-gap: 20px;
+    }
     .img {
       padding: em(50px) 0;
+      @include lg {
+        margin: 0 auto;
+        grid-row: 1;
+      }
       &:after {
         content: "";
         position: absolute;
@@ -43,6 +60,10 @@
         top: 0;
         right: 0;
         z-index: -1;
+        @include lg {
+          width: 100%;
+          right: -50px;
+        }
       }
     }
   }
@@ -53,15 +74,36 @@
   .content-wraper {
     display: grid;
     grid-template-columns: em(397px) auto;
+    @include lg {
+      grid-template-columns: 1fr;
+    }
     &.img-right {
       grid-template-columns: auto em(398px);
+      @include lg {
+        grid-template-columns: 1fr;
+      }
       .content {
         padding: em(20px) em(15px);
         padding-left: 0;
+        @include lg {
+          padding: em(20px) 0 !important;
+          grid-row: 2;
+        }
         &:after {
           left: auto;
           right: 100%;
+          @include lg {
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+          }
         }
+      }
+    }
+    .img {
+      @include lg {
+        margin: 0 auto;
       }
     }
     .content {
@@ -69,7 +111,13 @@
       padding: em(20px) em(15px);
       padding-left: (64px);
       position: relative;
-      min-height: em(371px);
+      @include rmd(992) {
+        min-height: em(371px);
+      }
+      @include lg {
+        background: none;
+        padding: em(20px) 0;
+      }
       &:after {
         content: "";
         position: absolute;
@@ -79,6 +127,12 @@
         top: 0;
         background-color: rgba(#d32d38, 0.02);
         z-index: -1;
+        @include lg {
+          left: 50%;
+          right: 50%;
+          margin-left: -50vw;
+          margin-right: -50vw;
+        }
       }
     }
   }
@@ -89,6 +143,9 @@
   .content-wraper {
     grid-template-columns: auto em(529px);
     grid-column-gap: em(60px);
+    @include lg {
+      grid-template-columns: 1fr;
+    }
     .img {
       &:after {
         // width: em(364px);
@@ -102,6 +159,9 @@
   .img-left {
     grid-template-columns: em(529px) auto;
     grid-column-gap: em(73px);
+    @include lg {
+      grid-template-columns: 1fr;
+    }
     .img {
       img {
         z-index: 2;
@@ -112,6 +172,10 @@
         right: auto;
         left: 0;
         z-index: 1;
+        @include lg {
+          right: -50px;
+          left: auto;
+        }
       }
     }
   }

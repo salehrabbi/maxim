@@ -138,11 +138,11 @@ blockquote {
   border-left: 2px solid #d32d38;
   padding: em(5px) 0;
   padding-left: em(19px);
-  font-size: 18px;
+  font-size: em(18px);
   h5 {
     font-weight: 600;
     color: rgba(#000000, 0.9);
-    font-size: 18px;
+    font-size: calc-em(18, 18);
   }
   p {
     font-size: 14px;
@@ -161,10 +161,13 @@ blockquote {
     grid-template-columns: calc-em(23, 16) 1fr;
     grid-column-gap: calc-em(13, 16);
     padding: em(10px) 0;
+    @include md {
+      font-size: 14px;
+    }
     i {
       // margin-top: calc-em(29, 18);
       // color: #d32d38;
-      font-size: 23px;
+      font-size: em(23px);
     }
     span {
     }
@@ -188,10 +191,24 @@ section.page-top {
   .content-wraper {
     grid-template-columns: 1fr 628px;
     grid-column-gap: em(52px);
+    @include xl {
+      grid-template-columns: 1fr;
+    }
+    .section-heading {
+      @include xl {
+        // grid-column: 1/-1;
+      }
+    }
   }
   .banner-big-img {
     position: relative;
-    min-height: em(488px);
+    @include rmd(1200) {
+      min-height: em(488px);
+    }
+    @include xl {
+      margin: 0 auto;
+      margin-bottom: 25px;
+    }
     img {
       position: relative;
       z-index: 2;
@@ -205,6 +222,12 @@ section.page-top {
       bottom: 0;
       border: 1px solid #d32d38;
       z-index: 1;
+      @include xl {
+        right: -25px;
+        width: 100%;
+        height: 100%;
+        bottom: -25px;
+      }
     }
   }
   .details {
