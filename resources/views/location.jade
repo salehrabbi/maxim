@@ -26,14 +26,15 @@ block main
         .section-heading.p-0.d-flex.flex-column.justify-content-center
           h2 NYC Hair Transplant Specialists
           h4.border-before.d-flex.align-items-center Providing Surgical & Non-Surgical Procedures
-          blockquote Our office is located on the upper east side, and we take clients from all of manhattan and nyc.
+          blockquote 
+            p.m-0 Our office is located on the upper east side, and we take clients from all of manhattan and nyc.
         .map.align-self-center
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.305935303!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z4Kao4Ka_4KaJIOCmh-Cmr-CmvOCmsOCnjeCmlSwg4Kau4Ka-4Kaw4KeN4KaV4Ka_4KaoIOCmr-CngeCmleCnjeCmpOCmsOCmvuCmt-CnjeCmn-CnjeCmsA!5e0!3m2!1sbn!2sbd!4v1577189207882!5m2!1sbn!2sbd" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
           .address-wraper.align-items-center
-            .address
+            .address.text-lg-left.text-center
               .title 903 Park Avenue, NY 10075
               a(href="#" style="text-decoration: underline;" target="_blank") Get directions
-            .contact.text-right
+            .contact.text-lg-right.text-center
               .title Contact No.
               a(href="#") (802) 370-3227  
       .row
@@ -72,7 +73,7 @@ block main
                 div(style="grid-column: 2/-1")  
                   a.more(href="#") Learn more
         .img.d-flex.align-items-center
-          img.w-100(src="dist/images/service-img.png" alt="")   
+          img.w-100.h-intial(src="dist/images/service-img.png" alt="")   
   section.technicians             
     .container.container-custom
       .technicians-wraper
@@ -121,7 +122,7 @@ block main
       .technicians-wraper.right
         .content
           h3 Why Maxim?
-          ul.p-0.m-0.list-unstyled
+          ul.p-0.m-0.list-unstyled 
             each val, index in ['Board Certified Surgeon. MEGA Sessions to 4K Grafts Outstanding Reviews.', 'AAAHC Certified Surgery Center.', 'BBB Accredited Facility. One Client at a Time.','Affordable Prices','0% Financing']
               li
                 <i class="fal fa-check-circle"></i>

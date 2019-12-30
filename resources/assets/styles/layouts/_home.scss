@@ -238,7 +238,7 @@
     box-shadow: 0 0 em(20px) #fff8f9;
     min-height: em(488px);
     @include md {
-      min-height: auto;
+      min-height: 290px;
     }
     @include sm {
       border: em(15px) solid #ffffff;
@@ -250,6 +250,9 @@
       display: none;
       height: 100%;
       width: 100%;
+      @include md {
+        min-height: 290px;
+      }
     }
     &.play {
       iframe {

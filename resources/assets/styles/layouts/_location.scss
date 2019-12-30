@@ -4,6 +4,12 @@
     padding-top: em(115px);
     padding-bottom: em(115px);
     background: #fff;
+    @include lg {
+      padding: 5em 0;
+      .section-heading {
+        grid-column: 1/-1;
+      }
+    }
   }
 }
 // ======================= .location-page-top
@@ -30,6 +36,10 @@
     display: grid;
     grid-template-columns: auto em(527px);
     grid-column-gap: em(150px);
+    @include xl {
+      grid-template-columns: 1fr;
+      grid-row-gap: 15px;
+    }
     .section-heading {
       h4 {
         font-size: em(17px);
@@ -50,6 +60,10 @@
     grid-template-columns: 1fr 1fr;
     padding: em(15px) em(20px);
     margin-top: em(-7px);
+    grid-row-gap: 15px;
+    @include md {
+      grid-template-columns: 1fr;
+    }
     a {
       color: #d32d38;
       font-size: em(14px);
@@ -80,6 +94,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: em(58px);
+    @include lg {
+      grid-template-columns: 1fr;
+    }
     .content {
       padding: 0;
       margin: 0;
@@ -128,12 +145,23 @@
             top: 0;
             z-index: -1;
             background-color: #fef8f8;
+            @include lg {
+              left: 50%;
+              right: 50%;
+              margin-left: -50vw;
+              margin-right: -50vw;
+            }
           }
         }
       }
     }
     .img {
       position: relative;
+      @include lg {
+        max-width: 436px;
+        margin: 0 auto;
+        padding: 40px 0;
+      }
       &:after {
         content: "";
         position: absolute;
@@ -160,10 +188,31 @@
     display: grid;
     grid-template-columns: em(402px) auto;
     grid-column-gap: (40px);
+    grid-row-gap: 30px;
+    @include lg {
+      grid-template-columns: 1fr;
+    }
     &.right {
       grid-template-columns: auto em(402px);
+      @include lg {
+        grid-template-columns: 1fr;
+      }
+      .img {
+        @include lg {
+          grid-row: 1;
+        }
+      }
+      .content {
+        @include lg {
+          grid-row: 2;
+        }
+      }
     }
     .img {
+      @include lg {
+        margin: 0 auto;
+        margin-top: 2.8125em;
+      }
       .img-shadow {
         position: relative;
         &:before {
@@ -178,6 +227,12 @@
       }
     }
     .content {
+      @include lg {
+        grid-column: 1/-1;
+      }
+      @include md {
+        font-size: 14px;
+      }
       h3 {
         font-size: em(29px);
         color: rgba(#000000, 0.8);
@@ -220,7 +275,10 @@
   .pricing-content-area {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: em(32px);
+    grid-gap: em(32px);
+    @include lg {
+      grid-template-columns: 1fr;
+    }
     .item {
       box-shadow: 0 10px 50px rgba(174, 174, 174, 0.1);
       border: 1px solid rgba(0, 0, 0, 0.1);
@@ -313,6 +371,9 @@
 }
 
 .client-review {
+  @include md {
+    font-size: 12px;
+  }
   > li {
     border-bottom: 1px solid #d9d9d9;
     padding: em(35px) 0;
@@ -364,8 +425,13 @@
 .faq {
   padding: em(45px) 0;
   position: relative;
-
+  @include lg {
+    background-color: #fff9fa;
+  }
   .img {
+    @include lg {
+      text-align: center;
+    }
     .img-bg {
       background-color: #fff9fa;
       position: absolute;
@@ -374,6 +440,9 @@
       z-index: -1;
       top: -50vh;
       right: 45%;
+      @include lg {
+        display: none;
+      }
     }
   }
   .see-more {
@@ -385,6 +454,13 @@
     display: grid;
     grid-template-columns: em(445px) auto;
     grid-column-gap: em(123px);
+    @include xl {
+      grid-column-gap: 30px;
+    }
+    @include lg {
+      grid-template-columns: 1fr;
+      grid-row-gap: 15px;
+    }
   }
   .card-header {
     background: none;
@@ -393,6 +469,9 @@
     border: none;
     border-bottom: 1px solid rgba(#000000, 0.2) !important;
     border-radius: 0 !important;
+    @include lg {
+      background: none;
+    }
     .btn {
       font-size: 15px;
       color: rgba(#d32d38, 0.92);
