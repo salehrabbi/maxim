@@ -42,10 +42,10 @@ footer.main-footer.space
               a(href="#")= val                         
   .container
     .footer-menu-area
-      .footer-logo
-        img.mr-3(src="dist/images/footer-logo.png" alt="")    
-        span.pl-3 © 2019 Maxim. All rights reserved.
-      ul.footer-menu.d-flex.flex-wrap.justify-content-end.align-content-center
+      .footer-logo.text-center.text-md-left
+        img.mr-lg-3(src="dist/images/footer-logo.png" alt="")    
+        span.pl-lg-3.d-block.d-lg-inline-block.mt-2.mt-lg-0 © 2019 Maxim. All rights reserved.
+      ul.footer-menu.d-flex.flex-wrap.justify-content-md-end.align-content-center.justify-content-center
         each val, index in ['Privacy', 'Security', 'Terms & Conditions']
           li
             a(href="#")= val

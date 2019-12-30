@@ -7,21 +7,21 @@ $(".video-carosual").slick({
   nextArrow: '<i class="far fa-angle-right right"></i>',
   responsive: [
     {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 4
+      }
+    },
+    {
       breakpoint: 768,
       settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: "40px",
         slidesToShow: 3
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 576,
       settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: "40px",
-        slidesToShow: 1
+        slidesToShow: 2
       }
     }
   ]

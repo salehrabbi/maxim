@@ -21,6 +21,9 @@ img {
 }
 .section-heading {
   padding-bottom: em(66px);
+  @include md {
+    font-size: 13px;
+  }
   h4 {
     font-size: em(22px);
     font-weight: 400;

@@ -59,6 +59,12 @@ $screen-xl-max: 1199px;
   }
 }
 
+@mixin rmd($screen-min) {
+  @media (min-width: $screen-min+"px") {
+    @content;
+  }
+}
+
 $rem-baseline: 16px !default;
 $rem-fallback: false !default;
 $rem-px-only: false !default;
