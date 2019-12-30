@@ -4,10 +4,10 @@ block title
   title Service
 
 block vars  
-  -var bodyClass = ''
+  -var bodyClass = 'service-page'
 
 block main
-  section.location-page-top.space.space-header.pb-0.page-top.service-page-top
+  section.overflow-x-hidden.location-page-top.space.space-header.pb-0.page-top.service-page-top
     .container
       .content-wraper
         .section-heading.p-0.d-flex.flex-column.justify-content-center
@@ -44,7 +44,7 @@ block main
           img.h-intial(src="dist/images/service-banner.png" alt="")
       .row
         include sections/video-carosual.jade         
-  section.advantage.advantage-bg.advantage-main
+  section.overflow-x-hidden.advantage.advantage-bg.advantage-main
     .container-custom.container
       .content-wraper
         .content.align-self-center
@@ -58,7 +58,7 @@ block main
                 span= val
         .img.position-relative
           img.h-intial(src="dist/images/advantage.png" alt="")  
-  section.price-section.overflow-hidden
+  section.overflow-x-hidden.price-section.overflow-hidden
     .container.container-custom
       .content-wraper
         .img
@@ -72,7 +72,7 @@ block main
               li
                 <i class="fal fa-check-circle"></i>
                 span= val
-  section.advantage.post-op.advantage-bg
+  section.overflow-x-hidden.advantage.post-op.advantage-bg
     .container-custom.container
       .content-wraper
         .content.align-self-center
@@ -86,7 +86,7 @@ block main
                 span= val
         .img.position-relative
           img.h-intial(src="dist/images/operation.png" alt="")              
-  section.price-section.overflow-hidden
+  section.overflow-x-hidden.price-section.overflow-hidden
     .container.container-custom
       .content-wraper.img-right
         .content.align-self-center.d-flex.flex-column.justify-content-center.pr-5
@@ -95,7 +95,7 @@ block main
             blockquote.mt-2 Strip of hair from the donor area (back of the head) dissected into individual grafts and transplanted to the thinning and balding areas.
         .img
           img.h-intial(src="dist/images/lab.png" alt="")
-  section.advantage.advantage-bg.why-maxim
+  section.overflow-x-hidden.advantage.advantage-bg.why-maxim
     .container-custom.container
       .content-wraper.img-left
         .img.position-relative.text-right
