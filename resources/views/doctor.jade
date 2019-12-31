@@ -7,7 +7,7 @@ block vars
   -var bodyClass = 'doctor-page'
 
 block main
-  section.location-page-top.space.space-header.pb-0.page-top.service-page-top.position-relative(style="z-index: 2;")
+  section.location-page-top.space.space-header.pb-0.page-top.service-page-top.position-relative.overflow-hidden(style="z-index: 2;")
     .container
       .content-wraper
         .section-heading.p-0.d-flex.flex-column.justify-content-center
@@ -106,7 +106,7 @@ block main
               li
                 <i class="fal fa-check-circle"></i>
                 span= val             
-  section.price-section.overflow-hidden
+  section.price-section.overflow-hidden.pt-0
     .container.container-custom
       .content-wraper.img-right
         .content.align-self-center.d-flex.flex-column.justify-content-center

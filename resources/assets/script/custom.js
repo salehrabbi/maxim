@@ -36,20 +36,20 @@ $(".more-doctor-slider").slick({
   nextArrow: '<i class="far fa-angle-right right"></i>',
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 992,
       settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: "40px",
         slidesToShow: 3
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 768,
       settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: "40px",
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
         slidesToShow: 1
       }
     }
