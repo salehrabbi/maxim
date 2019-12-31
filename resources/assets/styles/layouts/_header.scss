@@ -42,3 +42,37 @@
     }
   }
 }
+// ================================= mobile menu
+.main-header .navbar-brand,
+.main-header .menu-button {
+  @include xl {
+    position: static;
+  }
+}
+.main-header .navbar-brand {
+  @include xl {
+    margin-bottom: 15px;
+  }
+}
+.main-header .menu-button {
+  @include xl {
+    margin: 10px 17px;
+  }
+}
+.navbar-toggler {
+  @include xl {
+    margin-left: auto;
+    margin-top: -15px;
+  }
+}
+.navbar-collapse {
+  @include xl {
+    background: #fff;
+  }
+}
+.main-header .menu-button a {
+  @include xl {
+    padding: 0.644em 1.667em;
+    font-size: 16px;
+  }
+}
