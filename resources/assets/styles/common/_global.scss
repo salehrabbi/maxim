@@ -3,6 +3,13 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  &.active {
+    height: 100vh;
+    overflow: hidden;
+    #navbarSupportedContent {
+      left: 0;
+    }
+  }
 }
 @media (min-width: 1200px) {
   .container {
@@ -23,6 +30,9 @@ img {
   padding-bottom: em(66px);
   @include md {
     font-size: 13px;
+  }
+  @include sm {
+    padding-bottom: 37px;
   }
   h4 {
     font-size: em(22px);
@@ -108,6 +118,10 @@ p {
 .space {
   padding-top: em(67px);
   padding-bottom: em(67px);
+  @include sm {
+    padding-top: em(40px);
+    padding-bottom: em(40px);
+  }
   &-header {
     padding-top: em(102px);
   }
@@ -258,4 +272,7 @@ section.page-top {
 
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+.background-none {
+  background: none !important;
 }

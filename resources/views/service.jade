@@ -62,7 +62,9 @@ block main
     .container.container-custom
       .content-wraper
         .img
-          img.h-intial(src="dist/images/price.png" alt="")
+          picture
+            source.h-intial(media='(min-width: 576px)' srcset='dist/images/price.png')
+            img.h-intial(src='dist/images/price-mobile.png')
         .content.align-self-center.d-flex.flex-column.justify-content-center
           .section-heading.medium.m-0.p-0(style="max-width:415px")
             h3 Price
@@ -94,7 +96,9 @@ block main
             h3.pb-4 Technique
             blockquote.mt-2 Strip of hair from the donor area (back of the head) dissected into individual grafts and transplanted to the thinning and balding areas.
         .img
-          img.h-intial(src="dist/images/lab.png" alt="")
+          picture
+            source.h-intial(media='(min-width: 576px)' srcset='dist/images/lab.png')
+            img.h-intial(src="dist/images/lab-mobile.png" alt="")
   section.overflow-x-hidden.advantage.advantage-bg.why-maxim
     .container-custom.container
       .content-wraper.img-left

@@ -93,3 +93,20 @@
     margin-right: 29px;
   }
 }
+
+.copyright-mobile {
+  .collapsing {
+    transition: none !important;
+  }
+  i {
+    font-size: 30px;
+    cursor: pointer;
+  }
+  [aria-expanded="true"] {
+    i {
+      &:before {
+        content: "\f106";
+      }
+    }
+  }
+}

@@ -1,5 +1,8 @@
 .what_we_known_for {
   padding-bottom: em(103px);
+  @include sm {
+    padding-bottom: em(40px);
+  }
   .item {
     display: grid;
     grid-template-columns: em(687px) em(570px);
@@ -323,10 +326,9 @@
         text-transform: uppercase;
         border-right: 1px solid #d32d38;
         line-height: 1;
-        &:last-child {
-          @media (min-width: 768px) {
-            border-color: transparent;
-          }
+        &:last-child,
+        &:nth-child(2) {
+          border-color: transparent;
         }
         b {
           font-weight: 600;

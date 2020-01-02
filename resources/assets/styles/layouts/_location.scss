@@ -10,6 +10,10 @@
         grid-column: 1/-1;
       }
     }
+    @include sm {
+      padding-top: em(40px);
+      padding-bottom: em(40px);
+    }
   }
 }
 // ======================= .location-page-top
@@ -87,6 +91,9 @@
 // ================================ .services
 .services {
   margin-bottom: em(80px);
+  @include sm {
+    margin-bottom: 0;
+  }
   .section-heading {
     padding-bottom: em(47px);
   }
@@ -184,6 +191,10 @@
 .technicians {
   background-color: rgba(#fafafa, 0.92);
   padding: em(67px) 0;
+  @include sm {
+    padding-top: em(40px);
+    padding-bottom: em(40px);
+  }
   .technicians-wraper {
     display: grid;
     grid-template-columns: em(402px) auto;
@@ -272,6 +283,10 @@
   background: url(../images/pricing-bg.png) no-repeat;
   background-size: 100% 100%;
   padding-bottom: em(100px);
+  @include sm {
+    padding-top: em(40px);
+    padding-bottom: em(40px);
+  }
   .pricing-content-area {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -334,6 +349,10 @@
 // =================================.review
 .review {
   padding: em(75px) 0;
+  @include sm {
+    padding-top: em(40px);
+    padding-bottom: em(40px);
+  }
   .section-heading {
     padding-bottom: em(20px);
     h3 {
@@ -427,6 +446,10 @@
   position: relative;
   @include lg {
     background-color: #fff9fa;
+  }
+  @include sm {
+    padding-top: em(40px);
+    padding-bottom: em(40px);
   }
   .img {
     @include lg {

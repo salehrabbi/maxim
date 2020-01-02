@@ -43,6 +43,30 @@
   }
 }
 // ================================= mobile menu
+@include xl {
+  #navbarSupportedContent {
+    padding-top: 30px;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 999;
+    width: 272px; /*example + never use min-width with this solution */
+    height: 100vh;
+    background: #fff;
+    display: block;
+    transition: 0.5s;
+  }
+  .overlay-full.active {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    top: 0;
+    display: block;
+  }
+}
 .main-header .navbar-brand,
 .main-header .menu-button {
   @include xl {
@@ -51,6 +75,7 @@
 }
 .main-header .navbar-brand {
   @include xl {
+    margin: 0 auto;
     margin-bottom: 15px;
   }
 }
@@ -63,6 +88,9 @@
   @include xl {
     margin-left: auto;
     margin-top: -15px;
+    position: absolute;
+    right: 10px;
+    top: 18px;
   }
 }
 .navbar-collapse {

@@ -75,5 +75,8 @@ $(".playerID").click(function() {
   }
 });
 
-// ============================== bg
-// $(".faq .img-bg").css({ height: $(".faq").outerHeight() + "px" });
+// ============================== menu mobile
+$('[data-toggle="slide-collapse"]').on("click", function() {
+  $("body").toggleClass("active");
+  $(".overlay-full").toggleClass("active");
+});
