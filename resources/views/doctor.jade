@@ -96,7 +96,9 @@ block main
     .container.container-custom
       .content-wraper
         .img
-          img.h-intial(src="dist/images/patner.png" alt="")
+          picture
+            source.h-intial(media='(min-width: 576px)' srcset='dist/images/patner.png')
+            img.h-intial(src="dist/images/patner-m.png" alt="")
         .content.align-self-center.d-flex.flex-column.justify-content-center
           .section-heading.medium.m-0.p-0(style="max-width:415px")
             h3 Associations
@@ -118,7 +120,9 @@ block main
                 <i class="fal fa-check-circle"></i>
                 span= val
         .img
-          img.h-intial(src="dist/images/laptop.png" alt="")
+          picture
+            source.h-intial(media='(min-width: 576px)' srcset='dist/images/laptop.png')
+            img.h-intial(src="dist/images/laptop-m.png" alt="")
   section.more-doctor.pt-sm-3
     .container.container-custom
       .section-heading.medium.p-0.text-center(style="max-width:415px")

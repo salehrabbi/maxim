@@ -43,6 +43,7 @@
       }
       @include sm {
         border: em(15px) solid #ffffff;
+        height: 230px;
       }
     }
     .text {
@@ -56,7 +57,7 @@
       }
       @include sm {
         padding: 2.5em 30px;
-        font-size: 12px;
+        font-size: 11px;
       }
       h3 {
         font-size: em(38px);
@@ -124,10 +125,19 @@
     @include lg {
       grid-template-columns: 1fr;
     }
+    .item {
+      @include sm {
+        font-size: 13px;
+      }
+    }
     .img {
       height: em(296px);
       background: #f7f7f9;
       margin-bottom: em(40px);
+      @include sm {
+        height: 200px;
+        margin-bottom: 20px;
+      }
     }
     .text {
       .title {
@@ -158,6 +168,9 @@
   background-color: rgba(#000000, 0.01);
   .see-button {
     margin-top: em(70px);
+    @include sm{
+      margin-top: 2.375em;
+    }
   }
   .items-wraper {
     display: grid;
@@ -168,10 +181,11 @@
     }
     @include md {
       grid-column-gap: 1em;
-      grid-row-gap: 30px;
+      grid-row-gap: em(30px);
     }
     @include sm {
       grid-template-columns: 1fr;
+      font-size: 13px;
     }
     .item {
       background-color: #ffffff;
@@ -184,8 +198,11 @@
       @include md {
         box-shadow: none;
       }
+      @include sm {
+        max-width: 250px;
+      }
       .text {
-        padding: em(18px) 15px;
+        padding: em(18px) em(15px);
       }
       .title {
         font-size: em(24px);

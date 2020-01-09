@@ -9,18 +9,16 @@ block vars
 block main
   section.location-page-top.space.space-header.pb-0
     .pic-gallery.position-relative
-      .gallery
-        .row.m-0
-          .col-md-4.col-sm-6.col-12.p-0.d-block
-            img.w-100.h-100(src="dist/images/gallery-1.png" alt="")
-          .col-md-4.col-sm-6.col-12.p-0.d-none.d-md-block
-            img.w-100.h-100(src="dist/images/gallery-2.png" alt="")
-          .col-md-4.col-sm-6.col-12.p-0.d-none.d-sm-block
-            img.w-100.h-100(src="dist/images/gallery-3.png" alt="")
-        .container.gallery-show-wraper
-          a.gallery-show.d-flex.align-items-center.justify-content-center.ml-auto.text-decoration-none(href="#")
-            img(src="dist/images/gallery-dot.png" alt="")    
-            span Show Photos
+      .item
+        img.w-100.h-100(src="dist/images/gallery-1.png" alt="")
+      .item
+        img.w-100.h-100(src="dist/images/gallery-2.png" alt="")
+      .item
+        img.w-100.h-100(src="dist/images/gallery-3.png" alt="")
+    //- .container.gallery-show-wraper
+      a.gallery-show.d-flex.align-items-center.justify-content-center.ml-auto.text-decoration-none(href="#")
+        img(src="dist/images/gallery-dot.png" alt="")    
+        span Show Photos
     .container
       .content-wraper
         .section-heading.p-0.d-flex.flex-column.justify-content-center

@@ -21,7 +21,7 @@ $(".video-carosual").slick({
     {
       breakpoint: 576,
       settings: {
-        slidesToShow: 2
+        slidesToShow: 1
       }
     }
   ]
@@ -34,6 +34,34 @@ $(".more-doctor-slider").slick({
   autoplay: true,
   prevArrow: '<i class="far fa-angle-left left"></i>',
   nextArrow: '<i class="far fa-angle-right right"></i>',
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
+$(".pic-gallery").slick({
+  slidesToShow: 3,
+  dots: false,
+  arrows: false,
+  infinite: true,
+  autoplay: true,
   responsive: [
     {
       breakpoint: 992,

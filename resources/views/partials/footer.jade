@@ -2,44 +2,54 @@ footer.main-footer.space
   .container
     .widget-area
       .widget.widget-1
-        h3 Contact Us
-        ul
-          each val, index in ['USA : (802) 370-3227', 'DUBAI : 971 52 718-1555', 'TURKEY : (802) 278-5098','PHILIPPINES : +63 2 818 6000']
-            li
-              a(href="#")= val
-        #footer-social.d-flex
-          a(href="#") 
-            <i class="fab fa-instagram"></i>    
-          a(href="#")
-            <i class="fab fa-facebook-f"></i>
-          a(href="#")
-            <i class="fab fa-linkedin-in"></i>
-          a.mr-0(href="#")
-            <i class="fab fa-twitter"></i>       
+        h3(data-toggle="collapse" href="#widget-1" role="button" aria-expanded="false" aria-controls="widget-1") Contact Us
+          <i class="fas fa-angle-down d-inline-block d-sm-none ml-2"></i>
+        #widget-1.collapse.h-sm-100.d-sm-block
+          ul
+            each val, index in ['USA : (802) 370-3227', 'DUBAI : 971 52 718-1555', 'TURKEY : (802) 278-5098','PHILIPPINES : +63 2 818 6000']
+              li
+                a(href="#")= val
+          #footer-social.d-flex
+            a(href="#") 
+              <i class="fab fa-instagram"></i>    
+            a(href="#")
+              <i class="fab fa-facebook-f"></i>
+            a(href="#")
+              <i class="fab fa-linkedin-in"></i>
+            a.mr-0(href="#")
+              <i class="fab fa-twitter"></i>       
       .widget
-        h3 locations
-        ul
-          each val, index in ['NEW YORK', 'GREAT NECK', 'HAUPPAUGE','WHITE PLAINS','More']
-            li
-              a(href="#")= val        
+        h3(data-toggle="collapse" href="#widget-2" role="button" aria-expanded="false" aria-controls="widget-2") locations
+          <i class="fas fa-angle-down d-inline-block d-sm-none ml-2"></i>
+        #widget-2.collapse.h-sm-100.d-sm-block
+          ul
+            each val, index in ['NEW YORK', 'GREAT NECK', 'HAUPPAUGE','WHITE PLAINS','More']
+              li
+                a(href="#")= val        
       .widget
-        h3 doctors
-        ul
-          each val, index in ['DR. DOSHI', 'DR. MAYER', 'DR. GAMEZ','DR. GAMEZ','More']
-            li
-              a(href="#")= val 
+        h3(data-toggle="collapse" href="#widget-3" role="button" aria-expanded="false" aria-controls="widget-3") doctors
+          <i class="fas fa-angle-down d-inline-block d-sm-none ml-2"></i>
+        #widget-3.collapse.h-sm-100.d-sm-block
+          ul
+            each val, index in ['DR. DOSHI', 'DR. MAYER', 'DR. GAMEZ','DR. GAMEZ','More']
+              li
+                a(href="#")= val 
       .widget
-        h3 services
-        ul
-          each val, index in ['HAIR TRANSPLANT', 'NON-SURGICAL', 'STEM CELLS','FACIAL HAIR']
-            li
-              a(href="#")= val 
+        h3(data-toggle="collapse" href="#widget-4" role="button" aria-expanded="false" aria-controls="widget-4") services
+          <i class="fas fa-angle-down d-inline-block d-sm-none ml-2"></i>
+        #widget-4.collapse.h-sm-100.d-sm-block
+          ul
+            each val, index in ['HAIR TRANSPLANT', 'NON-SURGICAL', 'STEM CELLS','FACIAL HAIR']
+              li
+                a(href="#")= val 
       .widget
-        h3 Support
-        ul
-          each val, index in ['CONTACT US', 'FAQ', 'Blog','VIDEOS']
-            li
-              a(href="#")= val                         
+        h3(data-toggle="collapse" href="#widget-5" role="button" aria-expanded="false" aria-controls="widget-5") Support
+          <i class="fas fa-angle-down d-inline-block d-sm-none ml-2"></i>
+        #widget-5.collapse.h-sm-100.d-sm-block  
+          ul
+            each val, index in ['CONTACT US', 'FAQ', 'Blog','VIDEOS']
+              li
+                a(href="#")= val                         
   .container
     .footer-menu-area
       .footer-logo.text-center.text-md-left

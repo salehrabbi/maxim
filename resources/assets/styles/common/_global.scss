@@ -223,6 +223,9 @@ section.page-top {
       margin: 0 auto;
       margin-bottom: 25px;
     }
+    @include sm {
+      grid-row: 1;
+    }
     img {
       position: relative;
       z-index: 2;
@@ -275,4 +278,12 @@ section.page-top {
 }
 .background-none {
   background: none !important;
+}
+
+.h {
+  &-sm-100 {
+    @include rmd(576) {
+      height: 100% !important;
+    }
+  }
 }
