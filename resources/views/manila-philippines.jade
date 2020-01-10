@@ -1,0 +1,112 @@
+extends layouts/app.jade
+
+block title
+  title Manila, Philippines
+
+block vars  
+  -var bodyClass = 'location-page'
+
+block main
+  section.location-page-top.space.space-header.pb-0
+    .pic-gallery.position-relative
+      each val, index in ['manila-1','manila-2','manila-3']
+        .item(style="background: url(dist/images/"+val+".jpg)")
+    .container
+      .content-wraper
+        .section-heading.p-0.d-flex.flex-column.justify-content-center
+          h2 Manila, Philippines
+          h4.border-before.d-flex.align-items-center Highly-Rated Hair Transplantation Clinic(mising)
+          blockquote 
+            p.m-0 Hair Transplants, Fut, Fue, Smp, Microneedling Facial Hair Transplants, Eyebrow, Mustache, Beard Hair Transplant. Serves Metro Manila, Quezon City, Luzon, Makati, Cebu, Davao & Southern Philippines.
+        .map.align-self-center
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.778591394073!2d121.01290761483956!3d14.554650189831772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe673a069d328c2ab!2sMAXiM%20Hair%20Restoration!5e0!3m2!1sbn!2sbd!4v1578671524167!5m2!1sbn!2sbd" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          .address-wraper.align-items-center
+            .address.text-lg-left.text-center
+              .title Alexander House, Suite 204, 132 Amorsolo St., Legaspi Village, Makati 1200, Metro Manila, Philippines
+              a(href="https://www.google.com/maps/place/MAXiM+Hair+Restoration/@14.5546502,121.0129076,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xe673a069d328c2ab!8m2!3d14.5546502!4d121.0150963" style="text-decoration: underline;" target="_blank") Get directions
+            .contact.text-lg-right.text-center
+              .title Contact No.
+              a(href="tel:+6328186000") +63 2 818 6000
+              br
+              a(href="tel:+6328133001") +63 2 813 3001
+      .row
+        include sections/video-carosual.jade    
+  section.meet_our_team.space
+    .container
+      .items-wraper
+        .section-heading.p-0.d-flex.flex-column.justify-content-center
+          h4.border-before.d-flex.align-items-center Our Doctors
+          h2 Meet Our Team
+          p.mb-0 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        .item
+          .img
+            img.w-100(src="dist/images/Dr_Ocampo.jpg" alt="")
+          .text.d-flex.flex-column.justify-content-center.align-items-center
+            a.title(href="#") Dr. Ocampo
+            p Plastic surgeon. Performs FUE
+        .item
+          .img
+            img.w-100(src="dist/images/Dr_Ryan.jpg" alt="")
+          .text.d-flex.flex-column.justify-content-center.align-items-center
+            a.title(href="#") DR. RYAN 
+            p Plastic surgeon. Performs FUE    
+  include sections/services.jade 
+  section.technicians             
+    .container.container-custom
+      .technicians-wraper
+        .img.d-flex.align-items-center.justify-content-end(style="margin-top: 2.8125em;")
+          .img-shadow
+            img.position-relative(src="dist/images/technicians.png" alt="")
+        .content
+          h3 Technicians
+          ul.p-0.m-0.list-unstyled
+            each val, index in ['5+ years ave. experience', 'FUT+FUE Experienced', 'Outstanding SMP Techs']
+              li
+                <i class="fal fa-check-circle"></i>
+                span= val  
+  section.pricing.space
+    .container.container-custom
+      .section-heading.text-center.medium
+        h3 Lorem ipsum
+        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+      .pricing-content-area
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-price.png" alt="")
+            span Pricing
+          ul
+            each val, index in ['Starting at Php 80 per graft','No hidden fee','No gimmicks','All inclusive','Accept Cash, Credit Cards']
+              li
+                span= val  
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-finance.png" alt="")
+            span Financing
+          ul  
+            each val, index in ['Cash','Major Credit Cards','Certified Checks','Wire Transfers','Bank financing directly through bank.']
+              li
+                span= val  
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-map.png" alt="")
+            span Areas Served
+          ul  
+            each val, index in ['Makati','Quezon City','Ortigas','Pasig','Metro Manila','Alabang','Cebu','Davao','Luzon','Philippines']
+              li
+                span= val                 
+  section.technicians             
+    .container.container-custom
+      .technicians-wraper.right
+        .content
+          h3 Why Maxim?
+          ul.p-0.m-0.list-unstyled 
+            each val, index in ['American company','Our Doctors are Plastic Surgeons.','MEGA Sessions to 4K Grafts Outstanding Reviews.','One Client at a Time.','Convenient, Makati location','Affordable Prices']
+              li
+                <i class="fal fa-check-circle"></i>
+                span= val  
+        .img.d-flex.align-items-center.justify-content-end
+          .img-shadow
+            img.position-relative(src="dist/images/card.png" alt="")
+
+  include sections/review.jade
+  include sections/faq.jade

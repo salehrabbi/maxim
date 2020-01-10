@@ -1,0 +1,104 @@
+extends layouts/app.jade
+
+block title
+  title Huntington, Long Island, NY
+
+block vars  
+  -var bodyClass = 'location-page'
+
+block main
+  section.location-page-top.space.space-header.pb-0
+    .pic-gallery.position-relative
+      each val, index in ['huntington','huntington','huntington']
+        .item(style="background: url(dist/images/"+val+".jpg)")
+    .container
+      .content-wraper
+        .section-heading.p-0.d-flex.flex-column.justify-content-center
+          h2 Huntington, LONG ISLAND, NY
+          h4.border-before.d-flex.align-items-center Highly-Rated Hair Transplantation Clinic(mising)
+          blockquote 
+            p.m-0 Hair Transplants, Fut, Fue, Smp, Microneedling Facial Hair Transplants, Eyebrow, Mustache, Beard Hair Transplant. Serves Nassau & Suffolk County & Hamptons On Long Island.
+        .map.align-self-center
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3018.907322857827!2d-73.41412518459146!3d40.82999927931923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e829021d64d087%3A0xb3c4e49b3553e148!2sWhitman%20Atrium!5e0!3m2!1sbn!2sbd!4v1578662672699!5m2!1sbn!2sbd" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          .address-wraper.align-items-center
+            .address.text-lg-left.text-center
+              .title 33 Walt Whitman Road Suite 228 West Entrance Huntington Station, NY 11746
+              a(href="https://www.google.com/maps/place/Whitman+Atrium/@40.8299993,-73.4141252,17z/data=!3m1!4b1!4m5!3m4!1s0x89e829021d64d087:0xb3c4e49b3553e148!8m2!3d40.8299993!4d-73.4119365" style="text-decoration: underline;" target="_blank") Get directions
+            .contact.text-lg-right.text-center
+              .title Contact No.
+              a(href="tel:5164477307") (516) 447-7307
+      .row
+        include sections/video-carosual.jade    
+  section.meet_our_team.space
+    .container
+      .items-wraper
+        .section-heading.p-0.d-flex.flex-column.justify-content-center
+          h4.border-before.d-flex.align-items-center Our Doctors
+          h2 Meet Our Team
+          p.mb-0 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        //- .item
+          .img
+            img.w-100(src="dist/images/doctor-1.png" alt="")
+          .text.d-flex.flex-column.justify-content-center.align-items-center
+            a.title(href="#") Dr. Doshi
+            p Plastic surgeon. Performs FUE
+  include sections/services.jade 
+  section.technicians             
+    .container.container-custom
+      .technicians-wraper
+        .img.d-flex.align-items-center.justify-content-end(style="margin-top: 2.8125em;")
+          .img-shadow
+            img.position-relative(src="dist/images/technicians.png" alt="")
+        .content
+          h3 Technicians
+          ul.p-0.m-0.list-unstyled
+            each val, index in ['Former Bosley Techs 8 years avg. experience', 'FUT+FUE Experienced', 'Outstanding SMP Techs Microneedling by Nurse']
+              li
+                <i class="fal fa-check-circle"></i>
+                span= val  
+  section.pricing.space
+    .container.container-custom
+      .section-heading.text-center.medium
+        h3 Lorem ipsum
+        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+      .pricing-content-area
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-price.png" alt="")
+            span Pricing
+          ul
+            each val, index in ['FUT starting at $3.50 per graft', 'FUE starting at $4.50 per graft','Min. Price FUT/FUE $6,000', 'No hidden fee','0% Financing','No gimmicks','Cashier’s Check + Financing','All inclusive','Accept Cash, Credit Cards']
+              li
+                span= val  
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-finance.png" alt="")
+            span Financing
+          ul  
+            each val, index in ['0% Financing if qualified', 'Care Credit', 'Lending Club','Green Sky Credit','Alphaeon (in process)','United Medical Credit']
+              li
+                span= val  
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-map.png" alt="")
+            span Areas Served
+          ul  
+            each val, index in ['Hauppauge, NY','Nassau County','Suffolk County','Long Island','Southampton, NY','Southampton, NY','Easthampton, NY','Westhampton, NY']
+              li
+                span= val                 
+  section.technicians             
+    .container.container-custom
+      .technicians-wraper.right
+        .content
+          h3 Why Maxim?
+          ul.p-0.m-0.list-unstyled 
+            each val, index in ['Board Certified Surgeon. MEGA Sessions to 4K Grafts Outstanding Reviews.', '5 Star Reviews','BBB Accredited','Great Location','One Client at a Time.','Affordable Prices','0% Financing','Hair is All We Do']
+              li
+                <i class="fal fa-check-circle"></i>
+                span= val  
+        .img.d-flex.align-items-center.justify-content-end
+          .img-shadow
+            img.position-relative(src="dist/images/card.png" alt="")
+
+  include sections/review.jade
+  include sections/faq.jade

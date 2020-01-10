@@ -1,7 +1,7 @@
 header.main-header
   .container-fluid
     nav.navbar.navbar-expand-xl.row.py-0
-      a.navbar-brand.py-0(href='#')
+      a.navbar-brand.py-0(href='index.html')
         img(src="dist/images/logo.png" alt="")
       button.navbar-toggler(type='button' data-toggle='slide-collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
         <i class="fas fa-bars"></i>
@@ -21,15 +21,28 @@ header.main-header
             a.nav-link(href='#') dOCTORS
           li.nav-item  
             a.nav-link(href='#') gALLERY
-          li.nav-item  
-            a.nav-link(href='#') uS lOCATIONS
           li.nav-item.dropdown
-            a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            a.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+              | uS lOCATIONS
+            .dropdown-menu
+              a.dropdown-item(href='new-york.html') New York, NY
+              a.dropdown-item(href='long-island.html') Great Neck, NY
+              a.dropdown-item(href='huntington.html') Huntington, NY 
+              a.dropdown-item(href='white-plains.html') White Plains, NY
+              a.dropdown-item(href='astoria.html') Astoria, NY
+              a.dropdown-item(href='dc-virginia.html') DC / Virginia 
+              a.dropdown-item(href='dallas.html') Dallas
+              a.dropdown-item(href='houston.html') Houston
+              a.dropdown-item(href='new-jersey.html') New Jersey
+              a.dropdown-item(href='newport.html') California 
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
               | intl lOCATIONS
-            .dropdown-menu(aria-labelledby='navbarDropdown')
-              a.dropdown-item(href='#') Action
-              a.dropdown-item(href='#') Another action
-              a.dropdown-item(href='#') Something else here
+            .dropdown-menu
+              a.dropdown-item(href='dubai.html') Dubai, U.A.E.
+              a.dropdown-item(href='manila-philippines.html') Manila, Philippines
+              a.dropdown-item(href='cebu.html') Cebu, Philippines
+              a.dropdown-item(href='turkey.html') Istanbul, Turkey
         .menu-button
           a.text-nowrap(href="#") 
             span.mr-2 Call 

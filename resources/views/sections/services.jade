@@ -1,0 +1,15 @@
+section.services.overflow-hidden
+  .container.container-custom
+    .section-heading.text-center.medium
+      h3.text-uppercase Services
+      p.m-0.mt-1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+    .searvice-content-wraper
+      ul.content
+        each val, index in [['Follicular Unit Transplantation (FUT)','Also known as The Strip hair transplant procedure, FUT is hair restoration surgery that enables MAXiM hair transplant surgeons to perform mega sessions up to 4,000 grafts.'],['Follicular Unit Extraction (FUE)','Also known as the No Linear Scar hair transplant method. Less discomfort and rapid recovery.'],['Scalp Micropigmentation (SMP)','Non-surgical procedure. Uses advanced, medical grade pigment. 3 to 4 sessions. Also ideal for scar revision and concealment.'],['Facial Hair Transplant','FUE, FUT, SMP, Microneedling, Microblading, for Eyebrow, Beard, Mustache'],['Microneedling','Minimally invasive procedure. Improves blood flow to the scalp. Can be combined with and hair transplant.'],['Hybrid Procedures','Combination of surgical & non-surgical hair restoration procedures. Hair transplant, SMP, microneedling']]
+          li
+            .title= val[0]
+            .p= val[1]
+              div(style="grid-column: 2/-1")  
+                a.more(href="#") Learn more
+      .img.d-sm-flex.align-items-center.d-none
+        img.w-100.h-intial(src="dist/images/service-img.png" alt="")  

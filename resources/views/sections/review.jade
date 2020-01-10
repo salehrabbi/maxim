@@ -1,0 +1,34 @@
+section.review.space
+  .container.container-custom
+    .section-heading.medium.text-left.m-0
+      h3.mb-2 Customer Review
+      .total-star.d-flex.align-items-center  
+        span 4.9
+        .stars
+          -for(var x=0; x<5; x++)
+            <i class="fas fa-star"></i>
+    ul.client-review.p-0.m-0.list-unstyled
+      -for(var y=0; y<2; y++)
+        li
+          .avator
+            .img
+              img(src="dist/images/review.png" alt="")
+            .text.align-self-center
+              .name.d-flex.align-items-center
+                a(href="#") Vincent T.
+                ul
+                  li 
+                    span September, 2019
+              .total-star.d-flex.align-items-center  
+                .stars.ml-0
+                  -for(var x=0; x<5; x++)
+                    <i class="fas fa-star"></i> 
+                span 5.0   
+          p.p “I had my first hair transplant in July 2016 with Maxim. I found everyone there very friendly and very considerate of my wishes and my comfort. They even bought me lunch when we took a brake around
+          div
+            a.more(href="#")
+              <i class="far fa-plus mr-1"></i>
+              span.color-black More 
+    div
+      a.more(href="#")
+        span.color-brick-red See all Reviews

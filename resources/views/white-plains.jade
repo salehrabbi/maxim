@@ -1,0 +1,104 @@
+extends layouts/app.jade
+
+block title
+  title WHITE PLAINS, WESTCHESTER COUNTY, NY
+
+block vars  
+  -var bodyClass = 'location-page'
+
+block main
+  section.location-page-top.space.space-header.pb-0
+    .pic-gallery.position-relative
+      each val, index in ['white-plains-1','white-plains-2','white-plains-3']
+        .item(style="background: url(dist/images/"+val+".jpg)")
+    .container
+      .content-wraper
+        .section-heading.p-0.d-flex.flex-column.justify-content-center
+          h2 WHITE PLAINS, WESTCHESTER COUNTY, NY
+          h4.border-before.d-flex.align-items-center Highly-Rated Hair Transplantation Clinic(mising)
+          blockquote 
+            p.m-0 Hair Transplants, Fut, Fue, Smp, Microneedling Facial Hair Transplants, Eyebrow, Mustache, Beard Hair Transplant. Serves Westchester County, Upper Bronx, Riverdale, Southern Connecticut (Ct) & Northern New Jersey (Nj).
+        .map.align-self-center
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48154.27429105578!2d-73.7632!3d41.0330845!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2943171310b77%3A0x117ab536d6c4dead!2s7-11%20S%20Broadway%20%23100%2C%20White%20Plains%2C%20NY%2010601%2C%20USA!5e0!3m2!1sen!2sbd!4v1578663876064!5m2!1sen!2sbd" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          .address-wraper.align-items-center
+            .address.text-lg-left.text-center
+              .title 7-11 S Broadway, Suite 100, White Plains, NY 10601
+              a(href="https://www.google.com/maps/place/7-11+S+Broadway+%23100,+White+Plains,+NY+10601,+USA/@41.0330845,-73.7632,13z/data=!4m5!3m4!1s0x89c2943171310b77:0x117ab536d6c4dead!8m2!3d41.0330845!4d-73.7632?hl" style="text-decoration: underline;" target="_blank") Get directions
+            .contact.text-lg-right.text-center
+              .title Contact No.
+              a(href="tel:8023703227")  (802) 370-3227
+      .row
+        include sections/video-carosual.jade    
+  section.meet_our_team.space
+    .container
+      .items-wraper
+        .section-heading.p-0.d-flex.flex-column.justify-content-center
+          h4.border-before.d-flex.align-items-center Our Doctors
+          h2 Meet Our Team
+          p.mb-0 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        .item
+          .img
+            img.w-100(src="dist/images/pic-dr-barnard.jpg" alt="")
+          .text.d-flex.flex-column.justify-content-center.align-items-center
+            a.title(href="#") Dr. Barnard 
+            p Performs hair transplants
+  include sections/services.jade 
+  section.technicians             
+    .container.container-custom
+      .technicians-wraper
+        .img.d-flex.align-items-center.justify-content-end(style="margin-top: 2.8125em;")
+          .img-shadow
+            img.position-relative(src="dist/images/technicians.png" alt="")
+        .content
+          h3 Technicians
+          ul.p-0.m-0.list-unstyled
+            each val, index in ['Former Bosley Techs 8 years avg. experience', 'FUT+FUE Experienced', 'Outstanding SMP Techs Microneedling by Nurse']
+              li
+                <i class="fal fa-check-circle"></i>
+                span= val  
+  section.pricing.space
+    .container.container-custom
+      .section-heading.text-center.medium
+        h3 Lorem ipsum
+        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+      .pricing-content-area
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-price.png" alt="")
+            span Pricing
+          ul
+            each val, index in ['FUT starting at $3.50 per graft', 'FUE starting at $4.50 per graft','Min. Price FUT/FUE $6,000', 'No hidden fee','0% Financing','No gimmicks','Cashier’s Check + Financing','All inclusive','Accept Cash, Credit Cards']
+              li
+                span= val  
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-finance.png" alt="")
+            span Financing
+          ul  
+            each val, index in ['0% Financing if qualified', 'Care Credit', 'Lending Club','Green Sky Credit','Alphaeon (in process)','United Medical Credit']
+              li
+                span= val  
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-map.png" alt="")
+            span Areas Served
+          ul  
+            each val, index in ['White Plains, NY','Westchester County','Connecticut','New York City','New Jersey','Long Island']
+              li
+                span= val                 
+  section.technicians             
+    .container.container-custom
+      .technicians-wraper.right
+        .content
+          h3 Why Maxim?
+          ul.p-0.m-0.list-unstyled 
+            each val, index in ['Board Certified Surgeon. MEGA Sessions to 4K Grafts Outstanding Reviews.', '5 Star Reviews','BBB Accredited','Great Location','One Client at a Time.','Affordable Prices','0% Financing','Hair is All We Do']
+              li
+                <i class="fal fa-check-circle"></i>
+                span= val  
+        .img.d-flex.align-items-center.justify-content-end
+          .img-shadow
+            img.position-relative(src="dist/images/card.png" alt="")
+
+  include sections/review.jade
+  include sections/faq.jade

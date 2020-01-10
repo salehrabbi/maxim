@@ -1,0 +1,104 @@
+extends layouts/app.jade
+
+block title
+  title Istanbul, Turkey
+
+block vars  
+  -var bodyClass = 'location-page'
+
+block main
+  section.location-page-top.space.space-header.pb-0
+    .pic-gallery.position-relative
+      each val, index in ['turkey-1','turkey-2','turkey-3']
+        .item(style="background: url(dist/images/"+val+".jpg)")
+    .container
+      .content-wraper
+        .section-heading.p-0.d-flex.flex-column.justify-content-center
+          h2 Istanbul, Turkey
+          h4.border-before.d-flex.align-items-center Highly-Rated Hair Transplantation Clinic(mising)
+          blockquote 
+            p.m-0 Hair Transplants, Fut, Fue, Smp, Microneedling Facial Hair Transplants, Eyebrow, Mustache, Beard Hair Transplant.
+        .map.align-self-center
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.459113573604!2d28.99858431541559!3d41.05895597929566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7aa6ae9e5e7%3A0x7e34efc25891d620!2zRnVseWEsIFlhdnV6IFNrLiBObzo3LCAzNDM5NCDFnmnFn2xpL8Swc3RhbmJ1bCwg4Kak4KeB4Kaw4Ka44KeN4KaV!5e0!3m2!1sbn!2sbd!4v1578674734382!5m2!1sbn!2sbd" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          .address-wraper.align-items-center
+            .address.text-lg-left.text-center
+              .title Fulya Mah, Yavuz Sk. No:7, 34758 Şişli/Fulya/Şişli/İstanbul
+              a(href="https://www.google.com/maps/place/Fulya,+Yavuz+Sk.+No:7,+34394+%C5%9Ei%C5%9Fli%2F%C4%B0stanbul,+%E0%A6%A4%E0%A7%81%E0%A6%B0%E0%A6%B8%E0%A7%8D%E0%A6%95/@41.058956,28.9985843,17z/data=!3m1!4b1!4m5!3m4!1s0x14cab7aa6ae9e5e7:0x7e34efc25891d620!8m2!3d41.058956!4d29.000773" style="text-decoration: underline;" target="_blank") Get directions
+            .contact.text-lg-right.text-center
+              .title Contact No.
+              a(href="tel:8023703227") (802) 370-3227
+      .row
+        include sections/video-carosual.jade    
+  section.meet_our_team.space
+    .container
+      .items-wraper
+        .section-heading.p-0.d-flex.flex-column.justify-content-center
+          h4.border-before.d-flex.align-items-center Our Doctors
+          h2 Meet Our Team
+          p.mb-0 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        .item
+          .img
+            img.w-100(src="dist/images/hakan.jpg" alt="")
+          .text.d-flex.flex-column.justify-content-center.align-items-center
+            a.title(href="#") Dr. Hakan
+            p Plastic surgeon. Performs FUE
+  include sections/services.jade 
+  section.technicians             
+    .container.container-custom
+      .technicians-wraper
+        .img.d-flex.align-items-center.justify-content-end(style="margin-top: 2.8125em;")
+          .img-shadow
+            img.position-relative(src="dist/images/technicians.png" alt="")
+        .content
+          h3 Technicians
+          ul.p-0.m-0.list-unstyled
+            each val, index in ['Experienced Techs and Nurses','Over 10 years experience', 'FUE Experienced']
+              li
+                <i class="fal fa-check-circle"></i>
+                span= val  
+  section.pricing.space
+    .container.container-custom
+      .section-heading.text-center.medium
+        h3 Lorem ipsum
+        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+      .pricing-content-area
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-price.png" alt="")
+            span Pricing
+          ul
+            each val, index in ['Starts at $2,000','$1 per graft','No hidden fees','No gimmicks','All inclusive incl. 2 Day Hotel Stay','Airport and Hotel-Clinic Pick/Drop','Excludes airfare','Accept Cash, Credit Card, Certified Check, Wire Transfer']
+              li
+                span= val  
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-finance.png" alt="")
+            span Financing
+          ul  
+            each val, index in ['Credit Cards','Cash','Certified Checks','Bank Financing directly with banks.']
+              li
+                span= val  
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-map.png" alt="")
+            span Areas Served
+          ul  
+            each val, index in ['US','Europe','Spain, Germany, U.K.','Russia','Turkey','Saudi Arabia','Dubai and Abu Dhabi','U.A.E.','Oman','Qatar','Kuwait','India','Pakistan','Africa','Middle East']
+              li
+                span= val                 
+  section.technicians             
+    .container.container-custom
+      .technicians-wraper.right
+        .content
+          h3 Why Maxim?
+          ul.p-0.m-0.list-unstyled 
+            each val, index in ['MEGA Session FUE to 4,000 Grafts','State-of-the-art Facility','All inclusive incl. 2 Day Hotel Stay','Airport Pick+Drop','Concierge service','Pre and post-FUE Preparation','One Client per Day','Very affordable prices','World Class City','Great Location in European side of Istanbul','Combine with sight-seeing/Vacation']
+              li
+                <i class="fal fa-check-circle"></i>
+                span= val  
+        .img.d-flex.align-items-center.justify-content-end
+          .img-shadow
+            img.position-relative(src="dist/images/card.png" alt="")
+
+  include sections/review.jade
+  include sections/faq.jade

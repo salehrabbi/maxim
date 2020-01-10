@@ -1,0 +1,104 @@
+extends layouts/app.jade
+
+block title
+  title Orange County Hair Transplant Specialists
+
+block vars  
+  -var bodyClass = 'location-page'
+
+block main
+  section.location-page-top.space.space-header.pb-0
+    .pic-gallery.position-relative
+      each val, index in ['newport','newport','newport']
+        .item(style="background: url(dist/images/"+val+".jpg)")
+    .container
+      .content-wraper
+        .section-heading.p-0.d-flex.flex-column.justify-content-center
+          h2 Orange County Hair Transplant Specialists
+          h4.border-before.d-flex.align-items-center Surgical and non-surgical procedures available
+          blockquote 
+            p.m-0 Hair Transplants, Fut, Fue, Smp, Microneedling Facial Hair Transplants, Eyebrow, Mustache, Beard Hair Transplant. Serves Newport Beach, Orange County, Los Angeles, Beverly Hills, & Southern California.
+        .map.align-self-center
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.810650614858!2d-117.87497438479656!3d33.610217080728575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6aa282579559b909!2sMAXiM%20Hair%20Restoration!5e0!3m2!1sbn!2sbd!4v1578670215512!5m2!1sbn!2sbd" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          .address-wraper.align-items-center
+            .address.text-lg-left.text-center
+              .title 280 Newport Center Dr., Suite 110, Newport Beach, CA 92660
+              a(href="https://www.google.com/maps/place/MAXiM+Hair+Restoration/@33.6102171,-117.8749744,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x6aa282579559b909!8m2!3d33.6102171!4d-117.8727857" style="text-decoration: underline;" target="_blank") Get directions
+            .contact.text-lg-right.text-center
+              .title Contact No.
+              a(href="tel:9492051092") (949) 205-1092
+      .row
+        include sections/video-carosual.jade    
+  section.meet_our_team.space
+    .container
+      .items-wraper
+        .section-heading.p-0.d-flex.flex-column.justify-content-center
+          h4.border-before.d-flex.align-items-center Our Doctors
+          h2 Meet Our Team
+          p.mb-0 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        .item
+          .img
+            img.w-100(src="dist/images/doctor-2.png" alt="")
+          .text.d-flex.flex-column.justify-content-center.align-items-center
+            a.title(href="#") Dr. Bernett
+            p Plastic surgeon. Performs FUE
+  include sections/services.jade 
+  section.technicians             
+    .container.container-custom
+      .technicians-wraper
+        .img.d-flex.align-items-center.justify-content-end(style="margin-top: 2.8125em;")
+          .img-shadow
+            img.position-relative(src="dist/images/technicians.png" alt="")
+        .content
+          h3 Technicians
+          ul.p-0.m-0.list-unstyled
+            each val, index in ['Former Bosley Techs 8 years avg. experience', 'FUT+FUE Experienced', 'Outstanding SMP Techs Microneedling by Surgeon']
+              li
+                <i class="fal fa-check-circle"></i>
+                span= val  
+  section.pricing.space
+    .container.container-custom
+      .section-heading.text-center.medium
+        h3 Lorem ipsum
+        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+      .pricing-content-area
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-price.png" alt="")
+            span Pricing
+          ul
+            each val, index in ['FUT starting at $3.50 per graft', 'FUE starting at $4.50 per graft','Min. Price FUT/FUE $6,000', 'No hidden fee','0% Financing','No gimmicks','Cashier’s Check + Financing','All inclusive','Accept Cash, Credit Cards']
+              li
+                span= val  
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-finance.png" alt="")
+            span Financing
+          ul  
+            each val, index in ['0% Financing if qualified', 'Care Credit', 'Lending Club','Green Sky Credit','Alphaeon (in process)','United Medical Credit']
+              li
+                span= val  
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-map.png" alt="")
+            span Areas Served
+          ul  
+            each val, index in ['Newport Beach','Orange County','Palm Desert','Beverly Hills','Los Angeles','California']
+              li
+                span= val                 
+  section.technicians             
+    .container.container-custom
+      .technicians-wraper.right
+        .content
+          h3 Why Maxim?
+          ul.p-0.m-0.list-unstyled 
+            each val, index in ['Board Certified Surgeon. MEGA Sessions to 4K Grafts Outstanding Reviews.','MAXIM is BBB Accredited.','Convenient location','One Client at a Time.','Affordable Prices','0% Financing']
+              li
+                <i class="fal fa-check-circle"></i>
+                span= val  
+        .img.d-flex.align-items-center.justify-content-end
+          .img-shadow
+            img.position-relative(src="dist/images/card.png" alt="")
+
+  include sections/review.jade
+  include sections/faq.jade

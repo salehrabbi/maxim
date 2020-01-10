@@ -1,0 +1,105 @@
+extends layouts/app.jade
+
+block title
+  title Astoria, Queens, NYC
+
+block vars  
+  -var bodyClass = 'location-page'
+
+block main
+  section.location-page-top.space.space-header.pb-0
+    .pic-gallery.position-relative
+      each val, index in ['astoria','astoria','astoria']
+        .item(style="background: url(dist/images/"+val+".jpg)")
+    .container
+      .content-wraper
+        .section-heading.p-0.d-flex.flex-column.justify-content-center
+          h2 Astoria, Queens, NYC
+          h4.border-before.d-flex.align-items-center Highly-Rated Hair Transplantation Clinic(mising)
+          blockquote 
+            p.m-0 
+              | Hair Transplants, Fut, Fue, Smp, Microneedling Facial Hair Transplants, Eyebrow, Mustache, Beard Hair Transplant. Serves Queens, Brooklyn, Bronx, New York City (Nyc) & Long Island.
+        .map.align-self-center
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.721704145714!2d-73.92279438459336!3d40.768145279325886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25f46c5c2d9d5%3A0x747b36021c4c56a7!2zMjgtMTggMzFzdCBTdCAybmQgRmxvb3IsIEFzdG9yaWEsIE5ZIDExMTAyLCDgpq7gpr7gprDgp43gppXgpr_gpqgg4Kav4KeB4KaV4KeN4Kak4Kaw4Ka-4Ka34KeN4Kaf4KeN4Kaw!5e0!3m2!1sbn!2sbd!4v1578664661969!5m2!1sbn!2sbd" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          .address-wraper.align-items-center
+            .address.text-lg-left.text-center
+              .title 28-18 31st St, 2nd Floor, Astoria, NY 11102 
+              a(href="https://www.google.com/maps/place/28-18+31st+St+2nd+Floor,+Astoria,+NY+11102,+%E0%A6%AE%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%95%E0%A6%BF%E0%A6%A8+%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%B7%E0%A7%8D%E0%A6%9F%E0%A7%8D%E0%A6%B0/@40.7681453,-73.9227944,17z/data=!3m1!4b1!4m5!3m4!1s0x89c25f46c5c2d9d5:0x747b36021c4c56a7!8m2!3d40.7681453!4d-73.9206057" style="text-decoration: underline;" target="_blank") Get directions
+            .contact.text-lg-right.text-center
+              .title Contact No.
+              a(href="tel:8023703227") (802) 370-3227
+      .row
+        include sections/video-carosual.jade    
+  section.meet_our_team.space
+    .container
+      .items-wraper
+        .section-heading.p-0.d-flex.flex-column.justify-content-center
+          h4.border-before.d-flex.align-items-center Our Doctors
+          h2 Meet Our Team
+          p.mb-0 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        .item
+          .img
+            img.w-100(src="dist/images/pic-dr-barnard.jpg" alt="")
+          .text.d-flex.flex-column.justify-content-center.align-items-center
+            a.title(href="#") Dr. Barnard 
+            p Performs hair transplants
+  include sections/services.jade 
+  section.technicians             
+    .container.container-custom
+      .technicians-wraper
+        .img.d-flex.align-items-center.justify-content-end(style="margin-top: 2.8125em;")
+          .img-shadow
+            img.position-relative(src="dist/images/technicians.png" alt="")
+        .content
+          h3 Technicians
+          ul.p-0.m-0.list-unstyled
+            each val, index in ['Over 10 years ave. experience', 'Skilled Hair Techs', 'FUE+FUT Experienced']
+              li
+                <i class="fal fa-check-circle"></i>
+                span= val  
+  section.pricing.space
+    .container.container-custom
+      .section-heading.text-center.medium
+        h3 Lorem ipsum
+        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+      .pricing-content-area
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-price.png" alt="")
+            span Pricing
+          ul
+            each val, index in ['Starts at $3.50/graft','Min. Price FUT/FUE $6,000', 'No hidden fee','No gimmicks','All inclusive','Accept Cash, Credit Cards']
+              li
+                span= val  
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-finance.png" alt="")
+            span Financing
+          ul  
+            each val, index in ['0% Financing if qualified', 'Care Credit', 'Lending Club','Green Sky Credit','Alphaeon (in process)','United Medical Credit']
+              li
+                span= val  
+        .item
+          .title.d-flex.align-items-center
+            img(src="dist/images/icon-map.png" alt="")
+            span Areas Served
+          ul  
+            each val, index in ['Queens, NY','Manhattan','Brooklyn, NY','Western Long Island','Westchester County']
+              li
+                span= val                 
+  section.technicians             
+    .container.container-custom
+      .technicians-wraper.right
+        .content
+          h3 Why Maxim?
+          ul.p-0.m-0.list-unstyled 
+            each val, index in ['Hands-on Surgeon','MEGA Sessions to 4K Grafts', '5 Star Reviews','Great Location','One Client at a Time.','Affordable Prices','Hair is All We Do']
+              li
+                <i class="fal fa-check-circle"></i>
+                span= val  
+        .img.d-flex.align-items-center.justify-content-end
+          .img-shadow
+            img.position-relative(src="dist/images/card.png" alt="")
+
+  include sections/review.jade
+  include sections/faq.jade

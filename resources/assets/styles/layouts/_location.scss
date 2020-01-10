@@ -19,11 +19,22 @@
 // ======================= .location-page-top
 .location-page-top {
   background-image: linear-gradient(73deg, #fff2f3 0%, #ffffff 100%);
+  blockquote {
+    color: #000;
+    p {
+      color: #000 !important;
+    }
+  }
   .pic-gallery {
     margin-bottom: em(30px);
     .gallery-show-wraper {
       margin-top: -70px;
       position: relative;
+    }
+    .item {
+      height: 197px;
+      background-size: cover !important;
+      background-position: center !important;
     }
     .gallery-show {
       background-color: #ffffff;
@@ -61,7 +72,7 @@
   .address-wraper {
     background-color: rgba(#2c2964, 0.02);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     padding: em(15px) em(20px);
     margin-top: em(-7px);
     grid-row-gap: 15px;
