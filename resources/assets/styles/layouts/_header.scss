@@ -13,6 +13,9 @@
     &.active {
       .nav-link {
         border-bottom: 2px solid #d32d38;
+        @include sm {
+          border: none;
+        }
       }
     }
   }
