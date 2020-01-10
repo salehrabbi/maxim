@@ -70,7 +70,7 @@ block main
                 | Lorem ipsum dolor sit amet, consetetur ddff sadipscing elitr, sed diam nonumy eirmod tempor.
                 div(style="grid-column: 2/-1")  
                   a.more(href="#") Learn more
-        .img.d-flex.align-items-center
+        .img.d-sm-flex.align-items-center.d-none
           img.w-100.h-intial(src="dist/images/service-img.png" alt="")   
   section.technicians             
     .container.container-custom
@@ -163,3 +163,6 @@ block main
         a.more(href="#")
           span.color-brick-red See all Reviews          
   include sections/faq.jade
+  //- ul
+    each val, index in [["day", "Wed", "test"]]
+      li(id="item-#{index}") #{val[0]}: #{val[1]} #{val[2]}   
