@@ -1,7 +1,7 @@
 extends layouts/app.jade
 
 block title
-  title Service
+  title Microneedling
 
 block vars  
   -var bodyClass = 'service-page'
@@ -11,35 +11,28 @@ block main
     .container
       .content-wraper
         .section-heading.p-0.d-flex.flex-column.justify-content-center
-          h2 Follicular Unit Transplantation (FUT)
-          h4.border-before.d-flex.align-items-center.border-bottom.mb-0.pb-4.mb-4  Mega Sessions up to 4,000 grafts.
+          h2 Microneedling
+          h4.border-before.d-flex.align-items-center.border-bottom.mb-0.pb-4.mb-4  Mega Sessions up to 4,000 grafts.(missing)
           blockquote.mt-2.mb-4 
             p(style="color: #000") 
-              | Also known as The 
-              b Strip hair transplant 
-              | procedure, FUT is hair restoration surgery that enables 
-              b MAXiM hair transplant surgeons
-              | to perform 
-              b mega sessions 
-              | up to 
-              b 4,000 grafts.
+              | Minimally invasive procedure. Improves blood flow to the scalp. Can be combined with and hair transplant.
           .details.mt-2
             .row
               .col-md-12.item
                 .img
                   img(src="dist/images/iprice-1.png" alt="")
                 span.title Price
-                span Affordable and 0% financing available in the US.
+                span Affordable and 0% financing available in the US
               .col-md-12.item
                 .img
                   img(src="dist/images/itime-2.png" alt="")
                 span.title Duration
-                span Procedure takes 5 to 7 hours.
+                span Each session takes approx 30 mins. To an hour.
               .col-md-12.item.mb-0
                 .img
                   img(src="dist/images/ian-3.png" alt="")  
                 span.title Anesthesia
-                span Local anesthesia Watch TV or take a nap.  
+                span Topical anesthesia is used
         .banner-big-img
           img.h-intial(src="dist/images/service-banner.png" alt="")
       .row
@@ -51,8 +44,8 @@ block main
           .section-heading.medium.m-0.p-0.mxw-100
             h3 Advantages
             p.mt-1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy dolore magna
-          ul.p-0.m-0.list-unstyled.list-red.pt-3
-            each val, index in ['MEGA Sessions Up to 4,000 Grafts','Proven Procedure','Higher Yield + Graft Survival','Denser Result']
+          ul.p-0.m-0.list-unstyled.list-red
+            each val, index in ['missing']
               li
                 <i class="fal fa-check-circle"></i>
                 span= val
@@ -70,7 +63,7 @@ block main
             h3 Price
             p.mt-1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy dolore magna
           ul.p-0.m-0.list-unstyled.list-red
-            each val, index in ['US Prices start at $3.50 per graft.','0% Financing Available.','Manila prices start at $1,500.','Turkey at $1,950.']
+            each val, index in ['Affordable and 0% financing available in the US','Varies depending upon size of scalp to be treated, condition and other factors.']
               li
                 <i class="fal fa-check-circle"></i>
                 span= val
@@ -82,7 +75,7 @@ block main
             h3 Pre/Post-OP
             p.mt-1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy dolore magna
           ul.p-0.m-0.list-unstyled.list-red
-            each val, index in ['No alcohol for 3 days prior','No blood thinners/Aspirin','We provide written pre and post-op instructions']
+            each val, index in ['Minimal preparation and follow-up.','Written instructions provided.','There may be some redness or bruising following treatment.']
               li
                 <i class="fal fa-check-circle"></i>
                 span= val
@@ -94,7 +87,11 @@ block main
         .content.align-self-center.d-flex.flex-column.justify-content-center.pr-5
           .section-heading.medium.m-0.p-0(style="max-width:100%")
             h3.pb-4 Technique
-            blockquote.mt-2 Strip of hair from the donor area (back of the head) dissected into individual grafts and transplanted to the thinning and balding areas.
+            ul.p-0.m-0.list-unstyled.list-red
+              each val, index in ['Apply topical anesthetic.','Roller device with 0.25-3 mm needles is used on the scalp.','Needles extend to the middle layer of the skin.','Soothing balm or serum applied after treatment.']
+                li
+                  <i class="fal fa-check-circle"></i>
+                  span= val
         .img
           picture
             source.h-intial(media='(min-width: 576px)' srcset='dist/images/lab.png')
@@ -102,16 +99,15 @@ block main
   section.overflow-x-hidden.advantage.advantage-bg.why-maxim
     .container-custom.container
       .content-wraper.img-left
-        .img.position-relative.text-right
+        .img.position-relative.text-right.d-flex.align-items-center.justify-content-end
           img.position-relative.h-intial(src="dist/images/why-maxim.png" alt="") 
         .content.align-self-center
           .section-heading.medium.m-0.p-0.mxw-100
             h3 Why Maxim?
             p.mt-1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy dolore magna
           ul.p-0.m-0.list-unstyled.list-red.pt-3
-            each val, index in ['Our surgeons can do MEGA Sessions to 4,000 Grafts','Skilled+Experienced Techs Hair is All We Do','0% Financing+Affordable']
+            each val, index in ['Medical setting.','Performed by a clinician.','Hair is All We Do.','0% Financing+Affordable']
               li
                 <i class="fal fa-check-circle"></i>
                 span= val
-
   include sections/faq.jade  

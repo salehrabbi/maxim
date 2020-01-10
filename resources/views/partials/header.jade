@@ -7,10 +7,16 @@ header.main-header
         <i class="fas fa-bars"></i>
       #navbarSupportedContent.collapse.navbar-collapse
         ul.navbar-nav.mx-auto
-          li.nav-item.active
-            a.nav-link(href='#')
-              | sERVICES 
-              span.sr-only (current)
+          li.nav-item.dropdown.active
+            a.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+              | sERVICES
+            .dropdown-menu
+              a.dropdown-item(href='hair-transplant-fut.html') FUT
+              a.dropdown-item(href='follicular-unit-extraction.html') FUE
+              a.dropdown-item(href='scalp-micropigmentation.html') SMP
+              a.dropdown-item(href='facial-hair-transplants.html') Facial Hair Transplant
+              a.dropdown-item(href='microneedling.html') Microneedling
+              a.dropdown-item(href='hybrid.html') HYBRID
           li.nav-item
             a.nav-link(href='#') dOCTORS
           li.nav-item  

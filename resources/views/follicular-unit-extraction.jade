@@ -1,7 +1,7 @@
 extends layouts/app.jade
 
 block title
-  title Service
+  title Follicular Unit Extraction (FUE) 
 
 block vars  
   -var bodyClass = 'service-page'
@@ -11,35 +11,28 @@ block main
     .container
       .content-wraper
         .section-heading.p-0.d-flex.flex-column.justify-content-center
-          h2 Follicular Unit Transplantation (FUT)
-          h4.border-before.d-flex.align-items-center.border-bottom.mb-0.pb-4.mb-4  Mega Sessions up to 4,000 grafts.
+          h2 Follicular Unit Extraction (FUE) 
+          h4.border-before.d-flex.align-items-center.border-bottom.mb-0.pb-4.mb-4  Mega Sessions up to 4,000 grafts.(missing)
           blockquote.mt-2.mb-4 
             p(style="color: #000") 
-              | Also known as The 
-              b Strip hair transplant 
-              | procedure, FUT is hair restoration surgery that enables 
-              b MAXiM hair transplant surgeons
-              | to perform 
-              b mega sessions 
-              | up to 
-              b 4,000 grafts.
+              | Also known as the No Linear Scar hair transplant method. Less discomfort and rapid recovery.
           .details.mt-2
             .row
               .col-md-12.item
                 .img
                   img(src="dist/images/iprice-1.png" alt="")
                 span.title Price
-                span Affordable and 0% financing available in the US.
+                span Higher than FUT since more detailed and longer than FUT
               .col-md-12.item
                 .img
                   img(src="dist/images/itime-2.png" alt="")
                 span.title Duration
-                span Procedure takes 5 to 7 hours.
+                span Procedure takes 6 to 8 hours.
               .col-md-12.item.mb-0
                 .img
                   img(src="dist/images/ian-3.png" alt="")  
                 span.title Anesthesia
-                span Local anesthesia Watch TV or take a nap.  
+                span Local anesthesia Watch TV or take a nap.
         .banner-big-img
           img.h-intial(src="dist/images/service-banner.png" alt="")
       .row
@@ -52,10 +45,9 @@ block main
             h3 Advantages
             p.mt-1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy dolore magna
           ul.p-0.m-0.list-unstyled.list-red.pt-3
-            each val, index in ['MEGA Sessions Up to 4,000 Grafts','Proven Procedure','Higher Yield + Graft Survival','Denser Result']
-              li
-                <i class="fal fa-check-circle"></i>
-                span= val
+            each val, index in ['The advantage of this technique is that there is no horizontal scar on the back of the head and there are no sutures. The recovery process is faster and there is minimal discomfort.  You can return to normal daily activity the next day.']
+              blockquote.mt-2
+                p.m-0= val
         .img.position-relative.d-flex.align-items-center
           img.h-intial(src="dist/images/advantage.png" alt="")  
   section.overflow-x-hidden.price-section.overflow-hidden
@@ -70,7 +62,7 @@ block main
             h3 Price
             p.mt-1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy dolore magna
           ul.p-0.m-0.list-unstyled.list-red
-            each val, index in ['US Prices start at $3.50 per graft.','0% Financing Available.','Manila prices start at $1,500.','Turkey at $1,950.']
+            each val, index in ['Higher than FUT since more detailed and longer than FUT']
               li
                 <i class="fal fa-check-circle"></i>
                 span= val
@@ -82,7 +74,7 @@ block main
             h3 Pre/Post-OP
             p.mt-1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy dolore magna
           ul.p-0.m-0.list-unstyled.list-red
-            each val, index in ['No alcohol for 3 days prior','No blood thinners/Aspirin','We provide written pre and post-op instructions']
+            each val, index in ['No alcohol for 3 days prior','No blood thinners/Aspirin','We provide written pre and post-op instructions','You can cover your head with a cap','Most strenuous activities are not permitted','The transplanted hair generally falls off after a few weeks and will re-grow after four months','You should begin to see results within six months of your FUE procedure','Fuller density is seen after nine months and can take up to a year.']
               li
                 <i class="fal fa-check-circle"></i>
                 span= val
@@ -94,7 +86,11 @@ block main
         .content.align-self-center.d-flex.flex-column.justify-content-center.pr-5
           .section-heading.medium.m-0.p-0(style="max-width:100%")
             h3.pb-4 Technique
-            blockquote.mt-2 Strip of hair from the donor area (back of the head) dissected into individual grafts and transplanted to the thinning and balding areas.
+            ul.p-0.m-0.list-unstyled.list-red
+              each val, index in ['One graft or Follicular Unit Transplanted at a Time','Perform FUE under local anesthesia','You can watch television, speak with the staff, or chat on the phone during your procedure','You may also take a nap during your FUE procedure.']
+                li
+                  <i class="fal fa-check-circle"></i>
+                  span= val
         .img
           picture
             source.h-intial(media='(min-width: 576px)' srcset='dist/images/lab.png')
@@ -109,7 +105,7 @@ block main
             h3 Why Maxim?
             p.mt-1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy dolore magna
           ul.p-0.m-0.list-unstyled.list-red.pt-3
-            each val, index in ['Our surgeons can do MEGA Sessions to 4,000 Grafts','Skilled+Experienced Techs Hair is All We Do','0% Financing+Affordable']
+            each val, index in ['Multiple technologies to perform the procedure.','Our doctors are surgeons','0% Financing+Affordable','Super-specialized in Hair']
               li
                 <i class="fal fa-check-circle"></i>
                 span= val
