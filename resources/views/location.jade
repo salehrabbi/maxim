@@ -162,24 +162,4 @@ block main
       div
         a.more(href="#")
           span.color-brick-red See all Reviews          
-  section.space.faq.overflow-hidden
-    .container
-      .section-heading.text-center.medium
-        h3 FAQS
-        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy dolore
-      .faq-content-wraper
-        .img.position-relative
-          img(src="dist/images/faq.png" alt="")  
-          .img-bg
-        .question  
-          #accordionExample.accordion
-            each val, index in ['Lorem ipsum dolor sit amet, consetetur','Lorem ipsum dolor sit amet, consetetur sadipscing elitr','Lorem ipsum dolor sit amet, consetetur','Lorem ipsum dolor sit amet, consetetur']
-              .card
-                .card-header.px-0.py-3.border-0(id="heading"+index)
-                  h3.mb-0.position-relative.pr-3
-                    button.btn.text-left.p-0(type='button' data-toggle='collapse' data-target='#collapse'+index aria-expanded='false' aria-controls='collapse'+index)= val
-                      <i class="far fa-angle-down"></i>
-                .collapse(aria-labelledby='heading'+index data-parent='#accordionExample' id="collapse"+index)
-                  .card-body.px-0.pt-0 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd...
-          .mt-5
-            <a class="see-more btn" href="#">See all</a>
+  include sections/faq.jade
